@@ -10,7 +10,7 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 
 // Site Settings
-define('SITE_URL', 'http://localhost/makeaibucks');
+define('SITE_URL', 'http://localhost:8000');
 define('SITE_NAME', 'MakeAIBucks');
 define('ADMIN_EMAIL', 'admin@makeaibucks.com');
 define('SECRET_KEY', 'mk-ai-bucks-secure-random-key-2024');
