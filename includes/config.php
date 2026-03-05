@@ -50,3 +50,4 @@ require_once INC_PATH . 'auth.php';
 require_once INC_PATH . 'seo.php';
 require_once INC_PATH . 'rate-limiter.php';
 require_once INC_PATH . 'cache-engine.php';
+require_once INC_PATH . 'ai-engine.php';

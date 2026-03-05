@@ -136,5 +136,19 @@ function isActive($slug, $current) {
  * Escape HTML
  */
 function h($text) {
-    return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+    return htmlspecialchars($text ?? '', ENT_QUOTES, 'UTF-8');
+}
+
+/**
+ * Get site setting from database
+ */
+function getSetting($key, $default = '') {
+    static $settings = null;
+    if ($settings === null) {
+        $data = db()->fetchAll("SELECT setting_key, setting_value FROM settings");
+        foreach ($data as $row) {
+            $settings[$row['setting_key']] = $row['setting_value'];
+        }
+    }
+    return $settings[$key] ?? $default;
 }
