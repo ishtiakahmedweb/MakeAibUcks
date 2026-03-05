@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a24e",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .tool-card {
+            transition: transform 0.2s ease;
+        }
+        .tool-card:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-72 bg-white dark:bg-slate-900/50 border-r border-slate-200 dark:border-primary/10 flex flex-col sticky top-0 h-screen">
+<div class="p-6 flex flex-col gap-6 h-full">
+<!-- Profile Summary -->
+<div class="flex items-center gap-3 p-2">
+<div class="size-12 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border-2 border-primary/30">
+<img class="w-full h-full object-cover" data-alt="User avatar of Alex Johnson" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYwl7ddGMGMGQ2aVFJjEy0fRwU3F5yPrL4IwNV-VuhTLkpP0P39wP7stVlom5PMCz8pNc6Zk3dHxBoBEWWijLBvv1vRnPdnaqEzMVyCf6XQilRciQ6qpqZXfK_hzgxgDENCJu_rsHTfjkuVXH38nz-WNsl6heqPdv0p3T0xUatfrHPeKbxFmzyZAw8n00I9P3rOc-5MlurgK3TgWIHkOCDt55NPPF5cJWtIkkfjTN9r2kS7FKhm9zvz4982HGzavI9d-rlvg9wxFE"/>
+</div>
+<div class="flex flex-col">
+<h2 class="text-slate-900 dark:text-white font-bold text-sm leading-tight">Alex Johnson</h2>
+<span class="text-primary text-xs font-semibold">Pro Member</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">person</span>
+<span class="text-sm font-medium">General Profile</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">history</span>
+<span class="text-sm font-medium">My Activity</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary text-white shadow-lg shadow-primary/20" href="#">
+<span class="material-symbols-outlined text-[20px] fill-1">bookmark</span>
+<span class="text-sm font-bold">Saved Tools</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+<span class="text-sm font-medium">Security &amp; Password</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="text-sm font-medium">Notifications</span>
+</a>
+</nav>
+<!-- Logout -->
+<div class="mt-auto pt-6 border-t border-slate-200 dark:border-primary/10">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="text-sm font-semibold">Logout</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Content Area -->
+<main class="flex-1 bg-[#f8fafc] dark:bg-background-dark min-h-screen flex flex-col">
+<div class="max-w-6xl w-full mx-auto px-8 py-10 flex-1">
+<!-- Page Header -->
+<header class="mb-10">
+<h1 class="text-4xl font-extrabold text-slate-900 dark:text-white mb-2 tracking-tight">Saved Tools</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg">Quick access to your most used AI tools.</p>
+</header>
+<!-- Tool Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Tool Card 1: Fiverr Gig Writer -->
+<div class="tool-card group relative bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-primary/10 overflow-hidden flex flex-col">
+<div class="h-1.5 w-full bg-blue-500"></div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2.5 bg-blue-50 dark:bg-blue-500/10 rounded-lg">
+<span class="material-symbols-outlined text-blue-500">edit_note</span>
+</div>
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-50 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400">Freelancing</span>
+</div>
+<h3 class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">Fiverr Gig Writer</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">Create high-converting gig descriptions and titles optimized for the Fiverr algorithm.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-xs font-semibold">1.2k uses</span>
+</div>
+<button class="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-lg transition-colors" title="Remove from saved">
+<span class="material-symbols-outlined fill-1">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tool Card 2: Etsy Product SEO -->
+<div class="tool-card group relative bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-primary/10 overflow-hidden flex flex-col">
+<div class="h-1.5 w-full bg-amber-500"></div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2.5 bg-amber-50 dark:bg-amber-500/10 rounded-lg">
+<span class="material-symbols-outlined text-amber-500">storefront</span>
+</div>
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-600 dark:bg-amber-500/20 dark:text-amber-400">E-Commerce</span>
+</div>
+<h3 class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">Etsy Product SEO</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">Generate tags, titles, and descriptions that help your handmade products rank higher.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-xs font-semibold">850 uses</span>
+</div>
+<button class="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-lg transition-colors" title="Remove from saved">
+<span class="material-symbols-outlined fill-1">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tool Card 3: YouTube Script Hook -->
+<div class="tool-card group relative bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-primary/10 overflow-hidden flex flex-col">
+<div class="h-1.5 w-full bg-violet-500"></div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2.5 bg-violet-50 dark:bg-violet-500/10 rounded-lg">
+<span class="material-symbols-outlined text-violet-500">smart_display</span>
+</div>
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-violet-50 text-violet-600 dark:bg-violet-500/20 dark:text-violet-400">Content</span>
+</div>
+<h3 class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">YouTube Script Hook</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">Stop the scroll with engaging intro hooks designed to skyrocket your video retention.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-xs font-semibold">2.4k uses</span>
+</div>
+<button class="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-lg transition-colors" title="Remove from saved">
+<span class="material-symbols-outlined fill-1">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tool Card 4: ChatGPT Prompt Builder -->
+<div class="tool-card group relative bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-primary/10 overflow-hidden flex flex-col">
+<div class="h-1.5 w-full bg-primary"></div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2.5 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">terminal</span>
+</div>
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary dark:text-primary">Prompt Eng.</span>
+</div>
+<h3 class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">ChatGPT Prompt Builder</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">Advanced framework to build complex prompts that get accurate results every time.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-xs font-semibold">5.1k uses</span>
+</div>
+<button class="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-lg transition-colors" title="Remove from saved">
+<span class="material-symbols-outlined fill-1">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Placeholder/Empty State trigger button -->
+<div class="tool-card group relative bg-slate-100/50 dark:bg-slate-900/30 rounded-xl border-2 border-dashed border-slate-300 dark:border-primary/20 overflow-hidden flex flex-col items-center justify-center p-8 text-center">
+<div class="p-4 bg-white dark:bg-slate-800 rounded-full shadow-sm mb-4">
+<span class="material-symbols-outlined text-slate-400 text-3xl">add_circle</span>
+</div>
+<h3 class="text-lg font-bold text-slate-700 dark:text-slate-300 mb-2">Need more tools?</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Explore our directory to find more AI tools to boost your income.</p>
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-2.5 px-6 rounded-lg text-sm transition-all shadow-md shadow-primary/20">
+                            Browse Tools
+                        </button>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-auto border-t border-slate-200 dark:border-primary/10 py-8 bg-white dark:bg-slate-900/30">
+<div class="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors" href="#">Contact Support</a>
+</div>
+<p class="text-slate-400 dark:text-slate-500 text-xs">© 2024 MakeAIBucks. All rights reserved.</p>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

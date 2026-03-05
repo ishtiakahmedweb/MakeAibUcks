@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=DM+Sans:wght@400;500;700&amp;family=JetBrains+Mono:wght@400&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a24e",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0b1120",
+                        "category-blue": "#3b82f6",
+                    },
+                    fontFamily: {
+                        "display": ["Syne", "sans-serif"],
+                        "body": ["DM Sans", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'DM Sans', sans-serif; }
+        h1, h2, h3, .font-syne { font-family: 'Syne', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl font-bold">payments</span>
+<span class="font-display text-xl font-bold tracking-tight text-slate-900 dark:text-white">MakeAIBucks</span>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-bold text-primary border-b-2 border-primary py-5" href="#">Tools</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Results</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Community</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="bg-slate-100 dark:bg-slate-900 border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary w-64" placeholder="Search prompts..." type="text"/>
+</div>
+<button class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-opacity-90 transition-all">Sign In</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-4 py-8">
+<!-- Breadcrumbs & Badge -->
+<nav class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 mb-6">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary" href="#">Results</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-slate-900 dark:text-slate-200 font-medium">Freelancing</span>
+</nav>
+<div class="mb-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-category-blue/10 text-category-blue text-xs font-bold uppercase tracking-wider mb-4">
+<span class="material-symbols-outlined text-sm">work</span>
+                Freelancing
+            </div>
+<h1 class="text-3xl md:text-4xl font-display font-extrabold leading-tight mb-4">Fiverr Gig for Minimalist Logo Design — Tech Startups</h1>
+<div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
+<a class="flex items-center gap-1 hover:text-primary" href="#">
+<span class="material-symbols-outlined text-sm">bolt</span>
+                    Freelance Gig Builder
+                </a>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                    Oct 24, 2023
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                    1,240 views
+                </span>
+</div>
+</div>
+<!-- Privacy Bar -->
+<div class="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-4 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="text-sm font-medium">This is a public result. Anyone with the link can view it.</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-sm">lock</span>
+                    Make Private
+                </button>
+<button class="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-lg text-red-500 border border-red-200 dark:border-red-900/30 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">
+<span class="material-symbols-outlined text-sm">restore_from_trash</span>
+                    Delete
+                </button>
+</div>
+</div>
+<!-- Main Content Card -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden mb-8">
+<!-- Input Summary -->
+<div class="p-6 md:p-8 bg-slate-50/50 dark:bg-slate-800/30">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Input Parameters</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Service Type</p>
+<p class="text-sm font-medium">Logo Design</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Niche</p>
+<p class="text-sm font-medium">Tech Startups &amp; SaaS</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Tone of Voice</p>
+<p class="text-sm font-medium">Professional &amp; Modern</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Package Tiers</p>
+<p class="text-sm font-medium">Basic, Standard, Premium</p>
+</div>
+</div>
+</div>
+<div class="h-px bg-slate-200 dark:bg-slate-800"></div>
+<!-- Output Content -->
+<div class="p-6 md:p-8">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Generated Output</h3>
+<div class="font-mono text-sm leading-relaxed text-slate-700 dark:text-slate-300 border-l-4 border-primary/40 pl-6 py-2">
+<p class="mb-4 text-slate-900 dark:text-white font-bold">Gig Title: I will design a modern minimalist logo for your tech startup</p>
+<p class="mb-4"><span class="text-primary font-bold">About This Gig:</span><br/>
+                    Are you a tech visionary looking for a visual identity that screams innovation? In the crowded SaaS landscape, your logo is your first handshake. I specialize in crafting clean, geometric, and scalable logos specifically for technology companies.</p>
+<p class="mb-4"><span class="text-primary font-bold">Why Choose Me?</span><br/>
+                    - 5+ years of experience in brand identity for web3 and fintech.<br/>
+                    - 100% original vector designs (AI, EPS, SVG).<br/>
+                    - Fast turnaround with focused communication.<br/>
+                    - Deep understanding of tech aesthetics.</p>
+<p class="mb-4 font-bold text-slate-900 dark:text-white">Pricing Breakdown:</p>
+<ul class="space-y-2 mb-4">
+<li><span class="font-bold">Basic ($25):</span> 1 Concept, High-Res PNG + JPG, 2 Revisions.</li>
+<li><span class="font-bold">Standard ($65):</span> 2 Concepts, Source Files, Social Media Kit, 5 Revisions.</li>
+<li><span class="font-bold">Premium ($120):</span> 3 Concepts, Full Stationery Design, VIP Support, Unlimited Revisions.</li>
+</ul>
+<p><span class="text-primary font-bold">Tags:</span> #TechLogo #Minimalist #SaaSBrand #StartupIdentity #VectorDesign</p>
+</div>
+</div>
+<!-- Action Bar -->
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-3 justify-center sm:justify-between items-center">
+<div class="flex gap-2">
+<button class="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:brightness-110 transition-all">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+                        Copy to Clipboard
+                    </button>
+<button class="flex items-center gap-2 border border-slate-300 dark:border-slate-700 px-4 py-2 rounded-lg text-sm font-bold hover:bg-white dark:hover:bg-slate-800 transition-all">
+<span class="material-symbols-outlined text-sm">share</span>
+                        Share
+                    </button>
+</div>
+<button class="flex items-center gap-2 text-category-blue px-4 py-2 rounded-lg text-sm font-bold hover:bg-category-blue/10 transition-all">
+                    Use This Tool
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Engagement Section -->
+<section class="mb-12">
+<div class="flex items-center gap-8 border-b border-slate-200 dark:border-slate-800 pb-4 mb-8">
+<div class="flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-slate-400">thumb_up</span>
+                    42 Likes
+                </div>
+<div class="flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-slate-400">comment</span>
+                    3 Comments
+                </div>
+<div class="flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-slate-400">share</span>
+                    12 Shares
+                </div>
+</div>
+<div class="space-y-8">
+<h3 class="font-display text-xl font-bold">Comments</h3>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div class="flex-1">
+<textarea class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-3 text-sm focus:ring-2 focus:ring-primary min-h-[100px]" placeholder="Add a comment..."></textarea>
+<div class="flex justify-end mt-2">
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold">Post Comment</button>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex gap-4">
+<img alt="User avatar" class="w-10 h-10 rounded-full shrink-0" data-alt="User avatar for James" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDBKDCTEb4iXWbMqO1xzoqtQ9sUYTDKGgus3Y4cDrE6p_3f97xgpwaWHpCXUTaqfrkM8PbOijkuEVQcEuDaIZ4OXrYS7TQCKGg2LVvF3da7eZ16epKA_6UV0ptLumt8dNCnWL6at2dNVOI17i7yNC0km-v6VWHJUDD95zpXx2dv0oC8eEWm0tzREV66fRvKMRX2ZUXzJQzdqTlBLnxETE_-DeEq2Nr7SZKOMrWszXU9vzrk85Ylcr8PFLJWNTYvH_zKmJ_S1J4p2Q"/>
+<div class="bg-slate-100 dark:bg-slate-900 p-4 rounded-xl flex-1">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm font-bold">James Miller</span>
+<span class="text-xs text-slate-500">2 days ago</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400">This prompt saved me so much time! The hierarchy in the description is exactly what clients look for on Fiverr.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<img alt="User avatar" class="w-10 h-10 rounded-full shrink-0" data-alt="User avatar for Sarah" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjQocl-_L4fMR7AesV0F4XbvlieJUClE2cv2Txi2DQrLNyEXGO5Aynle3CZBnfUJqqVtdCBqdYk0VnDpUTu1SLSZuMbQRoUJKrzhKBCoo2NhUlEKbfzygx7iCYxFG5QE0lpS67XZZx8dBgEwRAUvfGsLxpS8b3ywCf1taLRw9Rl5Yjy2tCwZlenjcwyBgiG4N32JGPyNmU16mOk3UQ3VQ3wKFyV7NUch97ilapSm8UVPtdGXky5xgOLqcKe0DBzEGD9j8Iug04_nQ"/>
+<div class="bg-slate-100 dark:bg-slate-900 p-4 rounded-xl flex-1">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm font-bold">Sarah Chen</span>
+<span class="text-xs text-slate-500">3 days ago</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400">Great output. I tweaked the tags slightly for better SEO but the core copy is solid.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Results -->
+<section class="border-t border-slate-200 dark:border-slate-800 pt-12">
+<h3 class="font-display text-2xl font-bold mb-8">Related Freelancing Results</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Related Card 1 -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-lg transition-all flex flex-col">
+<div class="p-5 flex-1">
+<div class="text-[10px] font-bold text-category-blue uppercase mb-2 tracking-widest">Freelancing</div>
+<h4 class="font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">Upwork Proposal for Web Dev</h4>
+<p class="text-sm text-slate-500 line-clamp-2">High-conversion proposal template for junior React developers targeting enterprise...</p>
+</div>
+<div class="px-5 py-3 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
+<span class="text-xs text-slate-400">840 views</span>
+<a class="text-xs font-bold text-primary flex items-center gap-1" href="#">
+                            View Result
+                            <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Related Card 2 -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-lg transition-all flex flex-col">
+<div class="p-5 flex-1">
+<div class="text-[10px] font-bold text-category-blue uppercase mb-2 tracking-widest">Freelancing</div>
+<h4 class="font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">Ghostwriting Service Tiers</h4>
+<p class="text-sm text-slate-500 line-clamp-2">Competitive pricing strategy and package descriptions for niche blog ghostwriters...</p>
+</div>
+<div class="px-5 py-3 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
+<span class="text-xs text-slate-400">2.1k views</span>
+<a class="text-xs font-bold text-primary flex items-center gap-1" href="#">
+                            View Result
+                            <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Related Card 3 -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-lg transition-all flex flex-col">
+<div class="p-5 flex-1">
+<div class="text-[10px] font-bold text-category-blue uppercase mb-2 tracking-widest">Freelancing</div>
+<h4 class="font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">Etsy Digital Product Titles</h4>
+<p class="text-sm text-slate-500 line-clamp-2">Optimized titles and SEO descriptions for digital printable planners and tools...</p>
+</div>
+<div class="px-5 py-3 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
+<span class="text-xs text-slate-400">512 views</span>
+<a class="text-xs font-bold text-primary flex items-center gap-1" href="#">
+                            View Result
+                            <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-16 mt-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 text-primary mb-6">
+<span class="material-symbols-outlined text-3xl font-bold">payments</span>
+<span class="font-display text-xl font-bold tracking-tight text-white">MakeAIBucks</span>
+</div>
+<p class="max-w-xs mb-8 leading-relaxed">Empowering the next generation of digital entrepreneurs with AI-powered tools and prompt engineering.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors text-white" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors text-white" href="#">
+<span class="material-symbols-outlined text-xl">forum</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors text-white" href="#">
+<span class="material-symbols-outlined text-xl">rss_feed</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Platform</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Prompt Tools</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Case Studies</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pricing</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Community</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Legal</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-800 mt-16 pt-8 text-xs text-center">
+                © 2023 MakeAIBucks. All rights reserved. Built for creators.
+            </div>
+</div>
+</footer>
+</body></html>

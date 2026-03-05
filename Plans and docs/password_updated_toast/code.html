@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Security &amp; Password - MakeAIBucks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=DM+Sans:wght@400;500;700&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a24e",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                        "navy-sidebar": "#0b1120",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "DM Sans", "sans-serif"],
+                        "syne": ["Syne", "sans-serif"],
+                        "dm": ["DM Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .font-syne { font-family: 'Syne', sans-serif; }
+        .font-dm { font-family: 'DM Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 bg-navy-sidebar flex flex-col border-r border-slate-800/50">
+<div class="p-6 flex flex-col h-full">
+<div class="flex items-center gap-3 mb-10">
+<div class="bg-primary/20 rounded-lg p-2">
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+<div>
+<h1 class="font-syne font-bold text-lg leading-none tracking-tight">MakeAIBucks</h1>
+<p class="text-xs text-slate-400 mt-1 font-dm">Premium Plan</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2 font-dm">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-slate-800/50 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-sm font-medium">Profile</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary border border-primary/20 rounded-lg" href="#">
+<span class="material-symbols-outlined">lock</span>
+<span class="text-sm font-medium">Security</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-slate-800/50 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">credit_card</span>
+<span class="text-sm font-medium">Billing</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-slate-800/50 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">code</span>
+<span class="text-sm font-medium">API Keys</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-slate-800/50 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">redeem</span>
+<span class="text-sm font-medium">Referrals</span>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-lg font-bold text-sm transition-all shadow-lg shadow-primary/20">
+                        Upgrade Now
+                    </button>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto relative">
+<!-- Header -->
+<header class="flex items-center justify-between px-8 py-4 border-b border-slate-800/50 sticky top-0 bg-background-dark/80 backdrop-blur-md z-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">shield</span>
+<h2 class="font-syne font-bold text-xl">Security &amp; Password</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-400 hover:text-white transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<button class="p-2 text-slate-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary/20 border border-primary/30 overflow-hidden ml-2">
+<img class="w-full h-full object-cover" data-alt="User avatar placeholder with abstract geometric patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMVfUdrgyGGz68vX3DNCcyeOU0MHEY3Pv3ePMGdUvcNpCjlLvE2cywELIJ3AjGQ7PqTBpZUpFEKhtyVq9_4pBZVL9Y6j7k8O87t-G1qkvHPsx2bWUVPAN0fKBt3Pv1LEcN6kBxvdz9SaI9DxIKZVxyU83tB1y3JTiD9yrcb65c4n0NlDEKvhvwMqIaXpTJuzyeIL4Cc5wCt6pdXR39ywIdNQ47HaTtz6isbLE7IpOu_yA-QSLzQVULkSMk2AhBQzZFUcJmdL_kqm0"/>
+</div>
+</div>
+</header>
+<div class="max-w-3xl mx-auto px-8 py-12">
+<div class="mb-10">
+<h1 class="font-syne text-4xl font-extrabold mb-3">Security Settings</h1>
+<p class="text-slate-400 font-dm text-lg">Manage your password and account security preferences to keep your earnings safe.</p>
+</div>
+<div class="space-y-8 font-dm">
+<!-- Form Section -->
+<div class="space-y-6">
+<div class="grid gap-2">
+<label class="text-sm font-semibold text-slate-300">Current Password</label>
+<div class="relative">
+<input class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-100" type="password" value="••••••••••••"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 cursor-pointer hover:text-slate-300">visibility</span>
+</div>
+</div>
+<hr class="border-slate-800"/>
+<div class="grid gap-2">
+<label class="text-sm font-semibold text-slate-300">New Password</label>
+<input class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-100" placeholder="Min. 8 characters" type="password"/>
+</div>
+<div class="grid gap-2">
+<label class="text-sm font-semibold text-slate-300">Confirm New Password</label>
+<input class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-100" placeholder="Repeat your new password" type="password"/>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-bold transition-all flex items-center gap-2">
+                            Save Changes
+                        </button>
+<button class="px-6 py-3 text-slate-400 hover:text-slate-200 font-medium transition-colors">
+                            Cancel
+                        </button>
+</div>
+<!-- Security Info Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
+<div class="p-5 bg-primary/5 border border-primary/10 rounded-xl">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary">vibration</span>
+<h3 class="font-bold text-slate-200">Two-Factor Auth</h3>
+</div>
+<p class="text-sm text-slate-400 mb-4">Add an extra layer of security to your account.</p>
+<button class="text-sm font-bold text-primary hover:underline">Enable 2FA</button>
+</div>
+<div class="p-5 bg-slate-900/50 border border-slate-800 rounded-xl">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-slate-400">devices</span>
+<h3 class="font-bold text-slate-200">Active Sessions</h3>
+</div>
+<p class="text-sm text-slate-400 mb-4">You are currently logged in on 2 devices.</p>
+<button class="text-sm font-bold text-slate-400 hover:text-slate-200">Manage Devices</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Success Toast Notification -->
+<div class="fixed bottom-8 right-8 z-50 animate-in fade-in slide-in-from-bottom-5 duration-300">
+<div class="flex items-center gap-4 bg-slate-900 border-l-4 border-primary p-5 rounded-lg shadow-2xl min-w-[320px]">
+<div class="flex-shrink-0 bg-primary/20 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl font-bold">check</span>
+</div>
+<div class="flex-1">
+<p class="font-dm text-slate-100 font-bold">Success!</p>
+<p class="font-dm text-slate-400 text-sm">Password updated successfully!</p>
+</div>
+<button class="text-slate-500 hover:text-slate-300 transition-colors">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

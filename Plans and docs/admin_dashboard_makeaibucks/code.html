@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MakeAIBucks Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=DM+Sans:wght@400;500;700&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a34a",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0b1120",
+                    },
+                    fontFamily: {
+                        "display": ["DM Sans", "sans-serif"],
+                        "syne": ["Syne", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "12px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+        .font-syne {
+            font-family: 'Syne', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="flex min-h-screen">
+<!-- Sidebar -->
+<aside class="w-[220px] bg-[#0b1120] border-r border-slate-800 flex flex-col fixed h-full z-50">
+<div class="p-6">
+<div class="flex items-center gap-2 mb-1">
+<div class="size-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+<h1 class="font-syne text-xl font-bold text-white tracking-tight">MakeAIBucks</h1>
+</div>
+<p class="text-slate-400 text-xs font-medium uppercase tracking-widest px-1">Admin Panel</p>
+</div>
+<nav class="flex-1 px-3 space-y-1">
+<!-- Nav Item Active -->
+<a class="flex items-center gap-3 px-3 py-3 rounded text-primary bg-primary/10 border-l-4 border-primary transition-all" href="#">
+<span class="material-symbols-outlined fill-1">dashboard</span>
+<span class="text-sm font-bold">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded text-slate-400 hover:text-white hover:bg-slate-800/50 transition-all" href="#">
+<span class="material-symbols-outlined">construction</span>
+<span class="text-sm font-medium">Tools</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded text-slate-400 hover:text-white hover:bg-slate-800/50 transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">Results</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded text-slate-400 hover:text-white hover:bg-slate-800/50 transition-all" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span class="text-sm font-medium">Requests</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded text-slate-400 hover:text-white hover:bg-slate-800/50 transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-sm font-medium">Subscribers</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded text-slate-400 hover:text-white hover:bg-slate-800/50 transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="p-4 mt-auto border-t border-slate-800">
+<a class="flex items-center gap-3 px-3 py-3 rounded text-slate-400 hover:text-red-400 hover:bg-red-400/10 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span class="text-sm font-medium">Exit Admin</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-[220px] bg-[#f8fafc] dark:bg-background-dark min-h-screen">
+<!-- Content Toolbar -->
+<header class="flex items-center justify-between px-8 py-6 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<h2 class="font-syne text-2xl font-bold text-slate-900 dark:text-white">Dashboard</h2>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-slate-600 dark:text-slate-300 text-sm font-medium">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>May 24, 2024</span>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="size-10 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center text-primary overflow-hidden">
+<img alt="Admin Avatar" class="w-full h-full object-cover" data-alt="Admin user profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4MwGrO_cW7uc-fRzmpBX3Dvu4SGN7xBCNN3dsA_zShfyp4hXF6DQ9Byo8VdwCuzs7sV8nqqK1DMWaHs-KCAZivarIROHW4x5m1PGWr4TCAdpMLFqXIXs08B6OHeTX8k6ZY9QPUH1MnlAY9YibADrsmtBCh4Lez7edg-AdneNL0pmU0cEfKrHsROUeHnHlTctQ2zoxkD6jki5xhf4jNGOjxcGTzDv6-msy-sHGziJ9esGH1UOmLBtlKrpQBN39hTmpZwQGPVBaXQM"/>
+</div>
+</div>
+</header>
+<div class="p-8 space-y-8">
+<!-- Top Row: Stats & Quick Actions -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Stats Grid (2x2) -->
+<div class="col-span-12 lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1">Total Tools</p>
+<h3 class="font-syne text-3xl font-extrabold text-primary">24</h3>
+</div>
+<div class="flex items-center gap-1 text-primary text-sm font-bold mt-4">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+5%</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1">Total Results</p>
+<h3 class="font-syne text-3xl font-extrabold text-primary">150k+</h3>
+</div>
+<div class="flex items-center gap-1 text-red-500 text-sm font-bold mt-4">
+<span class="material-symbols-outlined text-sm">trending_down</span>
+<span>-2%</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1">Daily Users</p>
+<h3 class="font-syne text-3xl font-extrabold text-primary">1.2k+</h3>
+</div>
+<div class="flex items-center gap-1 text-primary text-sm font-bold mt-4">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+12%</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1">Newsletter Subs</p>
+<h3 class="font-syne text-3xl font-extrabold text-primary">15k+</h3>
+</div>
+<div class="flex items-center gap-1 text-primary text-sm font-bold mt-4">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+8%</span>
+</div>
+</div>
+</div>
+<!-- Quick Actions & API Usage -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<h4 class="font-syne font-bold text-lg mb-4 text-slate-900 dark:text-white">Quick Actions</h4>
+<div class="flex flex-col gap-3">
+<button class="w-full py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-xl">add_circle</span>
+                                    Add New Tool
+                                </button>
+<button class="w-full py-3 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-xl">ios_share</span>
+                                    Export Subscribers
+                                </button>
+<button class="w-full py-3 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-xl">delete_sweep</span>
+                                    Clear Cache
+                                </button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<h4 class="font-syne font-bold text-sm text-slate-900 dark:text-white">Gemini API Usage</h4>
+<span class="text-xs font-bold text-slate-500">72%</span>
+</div>
+<div class="w-full h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[72%]"></div>
+</div>
+<p class="text-[11px] text-slate-400 mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">info</span>
+                                1.4M / 2M calls used this month
+                            </p>
+</div>
+</div>
+</div>
+<!-- Recent Activity Table -->
+<div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="px-6 py-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<h3 class="font-syne font-bold text-xl text-slate-900 dark:text-white">Recent Results</h3>
+<button class="text-primary text-sm font-bold hover:underline">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-slate-50 dark:bg-slate-800/50">
+<tr>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Time</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Tool</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Input Preview</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Status</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">10:24 AM</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">description</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">Text Gen</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400 italic">"Write a blog post about..."</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">
+                                            Public
+                                        </span>
+</td>
+<td class="px-6 py-4">
+<div class="flex gap-4">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">09:15 AM</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">image</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">Image AI</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400 italic">"Futuristic skyline in green..."</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+                                            Private
+                                        </span>
+</td>
+<td class="px-6 py-4">
+<div class="flex gap-4">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">08:42 AM</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">code</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">Code Fix</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400 italic">"Fix the async issue in..."</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">
+                                            Public
+                                        </span>
+</td>
+<td class="px-6 py-4">
+<div class="flex gap-4">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,47 @@
+Options -Indexes
+ServerSignature Off
+RewriteEngine On
+
+# Remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
+# Sitemap
+RewriteRule ^sitemap\.xml$ /api/sitemap.php [L]
+
+# Clean URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^tool/([a-z0-9-]+)/?$     /tool/index.php?slug=$1     [L,QSA]
+RewriteRule ^result/([a-z0-9-]+)/?$   /result/index.php?slug=$1   [L,QSA]
+RewriteRule ^category/([a-z0-9-]+)/?$ /category/index.php?slug=$1 [L,QSA]
+
+# Block direct access to includes and setup
+RewriteRule ^includes/ - [F,L]
+RewriteRule ^setup/    - [F,L]
+
+# Security headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Custom 404
+ErrorDocument 404 /404.php
+
+# PHP settings
+<IfModule mod_php.c>
+  php_flag display_errors Off
+  php_value memory_limit 256M
+  php_value max_execution_time 60
+</IfModule>
+
+# Cache static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+</IfModule>

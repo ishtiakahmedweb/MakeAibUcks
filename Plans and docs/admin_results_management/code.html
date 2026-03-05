@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MakeAIBucks Admin - Results Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&amp;family=DM+Sans:wght@400;500;700&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a34a",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#0b1120",
+                        "sidebar-dark": "#0b1120",
+                    },
+                    fontFamily: {
+                        "display": ["DM Sans", "sans-serif"],
+                        "heading": ["Syne", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Syne', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex">
+<!-- Sidebar -->
+<aside class="w-[220px] bg-sidebar-dark border-r border-slate-800 flex flex-col fixed inset-y-0 z-50">
+<div class="p-6 flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="text-white font-bold text-sm tracking-tight">MakeAIBucks</span>
+<span class="text-slate-500 text-[10px] uppercase tracking-widest font-bold">Admin Panel</span>
+</div>
+</div>
+<nav class="flex-1 px-3 space-y-1 mt-4">
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">construction</span>
+<span class="text-sm font-medium">Tools</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 bg-primary/10 text-primary rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span class="text-sm font-medium">Results</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">rebase</span>
+<span class="text-sm font-medium">Requests</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span class="text-sm font-medium">Subscribers</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="p-4 mt-auto">
+<a class="flex items-center gap-3 px-3 py-2.5 text-red-400 hover:text-red-300 hover:bg-red-400/10 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="text-sm font-medium">Exit Admin</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-[220px] p-8 bg-[#fdfdfd] dark:bg-background-dark min-h-screen">
+<!-- Header -->
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+<div class="flex items-center gap-4">
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white">Results Management</h1>
+<span class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-xs font-bold">
+                    150,422 Total Results
+                </span>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative w-full md:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all text-sm" placeholder="Search for results..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                    Export
+                </button>
+</div>
+</header>
+<!-- Table Card -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 border-bottom border-slate-200 dark:border-slate-800">
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Time</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Tool</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Input Preview</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Visibility</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<!-- Row 1 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600 dark:text-slate-400">10:24 AM</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">edit_note</span>
+<span class="text-sm font-medium text-slate-900 dark:text-slate-200">Fiverr Gig Writer</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate max-w-xs">I need a description for a logo design service that focuses on minimalism...</p>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="relative inline-flex h-5 w-9 items-center rounded-full bg-primary cursor-pointer">
+<span class="inline-block h-3.5 w-3.5 transform rounded-full bg-white transition translate-x-5"></span>
+</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Public</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-3">
+<button class="text-slate-400 hover:text-primary transition-colors">View</button>
+<button class="text-slate-400 hover:text-primary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] fill-current text-primary">grade</span>
+                                        Featured
+                                    </button>
+<button class="text-slate-400 hover:text-red-500 transition-colors">Delete</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600 dark:text-slate-400">09:45 AM</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-500 text-[18px]">smart_display</span>
+<span class="text-sm font-medium text-slate-900 dark:text-slate-200">YouTube Script Hook</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate max-w-xs">Top 10 AI tools for productivity in 2024. Start with a shocking statistic...</p>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="relative inline-flex h-5 w-9 items-center rounded-full bg-slate-300 dark:bg-slate-700 cursor-pointer">
+<span class="inline-block h-3.5 w-3.5 transform rounded-full bg-white transition translate-x-1"></span>
+</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Private</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-3">
+<button class="text-slate-400 hover:text-primary transition-colors">View</button>
+<button class="text-slate-400 hover:text-primary transition-colors">Feature</button>
+<button class="text-slate-400 hover:text-red-500 transition-colors">Delete</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600 dark:text-slate-400">08:12 AM</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-500 text-[18px]">shopping_bag</span>
+<span class="text-sm font-medium text-slate-900 dark:text-slate-200">Etsy SEO</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate max-w-xs">Handmade ceramic mug with blue glaze. Keywords: pottery, gift for her...</p>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="relative inline-flex h-5 w-9 items-center rounded-full bg-primary cursor-pointer">
+<span class="inline-block h-3.5 w-3.5 transform rounded-full bg-white transition translate-x-5"></span>
+</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Public</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-3">
+<button class="text-slate-400 hover:text-primary transition-colors">View</button>
+<button class="text-slate-400 hover:text-primary transition-colors">Feature</button>
+<button class="text-slate-400 hover:text-red-500 transition-colors">Delete</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/30 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<span class="text-xs text-slate-500 dark:text-slate-400">Showing 1 to 3 of 150,422 results</span>
+<div class="flex items-center gap-2">
+<button class="size-8 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded-lg bg-primary text-white text-xs font-bold">1</button>
+<button class="size-8 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 transition-colors text-xs font-medium">2</button>
+<button class="size-8 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 transition-colors text-xs font-medium">3</button>
+<span class="text-slate-400 px-1">...</span>
+<button class="size-8 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

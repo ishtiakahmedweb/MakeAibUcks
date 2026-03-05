@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>404 Page Not Found | MakeAIBucks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=DM+Sans:wght@400;500;700&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a24e",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Syne", "sans-serif"],
+                        "body": ["DM Sans", "sans-serif"],
+                        "manrope": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .text-gradient-green {
+            background: linear-gradient(180deg, #16a24e 0%, #0d5e2d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-button {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header / Navbar -->
+<header class="w-full border-b border-white/10 px-6 lg:px-20 py-4 flex items-center justify-between bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-2">
+<div class="text-primary">
+<svg fill="none" height="32" viewbox="0 0 48 48" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="font-display font-bold text-xl tracking-tight text-white">MakeAIBucks</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">Tools</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">Categories</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">Requests</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">How It Works</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-all">
+                Get Started Free
+            </button>
+</div>
+</header>
+<!-- Main Content: 404 Hero -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 py-20 text-center relative overflow-hidden">
+<!-- Abstract Background Glows -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] -z-10"></div>
+<div class="max-w-2xl w-full">
+<h1 class="font-display font-extrabold text-[120px] md:text-[160px] leading-none text-gradient-green mb-4">404</h1>
+<h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-4">Page not found</h2>
+<p class="text-white/60 text-base md:text-lg mb-10 max-w-md mx-auto">
+                The page you're looking for doesn't exist or has been moved.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+<a class="w-full sm:w-auto min-w-[160px] bg-primary hover:bg-primary/90 text-white font-bold py-3.5 px-8 rounded-lg transition-all flex items-center justify-center gap-2" href="/">
+<span class="material-symbols-outlined text-xl">home</span>
+                    Go Home
+                </a>
+<a class="w-full sm:w-auto min-w-[160px] glass-button hover:bg-white/10 text-white font-bold py-3.5 px-8 rounded-lg border border-white/20 transition-all flex items-center justify-center gap-2" href="/tools">
+<span class="material-symbols-outlined text-xl">grid_view</span>
+                    Browse Tools
+                </a>
+</div>
+<!-- Popular Tools Suggestion -->
+<div class="space-y-4">
+<p class="text-white/45 text-xs font-medium uppercase tracking-widest">While you're here:</p>
+<div class="flex flex-wrap justify-center gap-3">
+<a class="glass-button px-4 py-2 rounded-full border border-primary/30 text-white/90 text-sm font-medium hover:border-primary transition-all" href="#">
+                        Fiverr Gig Writer
+                    </a>
+<a class="glass-button px-4 py-2 rounded-full border border-blue-500/30 text-white/90 text-sm font-medium hover:border-blue-500 transition-all" href="#">
+                        YouTube Script Hook
+                    </a>
+<a class="glass-button px-4 py-2 rounded-full border border-purple-500/30 text-white/90 text-sm font-medium hover:border-purple-500 transition-all" href="#">
+                        Etsy SEO
+                    </a>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-black/20 border-t border-white/10 px-6 lg:px-20 py-16 mt-auto">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+<!-- Brand Column -->
+<div class="lg:col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="text-primary">
+<svg fill="none" height="28" viewbox="0 0 48 48" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="font-display font-bold text-lg text-white">MakeAIBucks</h2>
+</div>
+<p class="text-white/50 text-sm leading-relaxed mb-6 max-w-sm">
+                    Empowering creators and entrepreneurs with professional-grade AI tools to maximize efficiency and revenue.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/40 transition-all" href="#">
+<span class="material-symbols-outlined text-white/60">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/40 transition-all" href="#">
+<span class="material-symbols-outlined text-white/60">alternate_email</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/40 transition-all" href="#">
+<span class="material-symbols-outlined text-white/60">campaign</span>
+</a>
+</div>
+</div>
+<!-- Links Column 1: Tools -->
+<div>
+<h4 class="text-white font-bold text-sm mb-6 uppercase tracking-wider">Tools</h4>
+<ul class="space-y-4">
+<li><a class="text-white/50 hover:text-primary text-sm transition-colors" href="#">Content Writing</a></li>
+<li><a class="text-white/50 hover:text-primary text-sm transition-colors" href="#">Social Media</a></li>
+<li><a class="text-white/50 hover:text-primary text-sm transition-colors" href="#">Business Tools</a></li>
+<li><a class="text-white/50 hover:text-primary text-sm transition-colors" href="#">SEO Mastery</a></li>
+</ul>
+</div>
+<!-- Links Column 2: Platform -->
+<div>
+<h4 class="text-white font-bold text-sm mb-6 uppercase tracking-wider">Platform</h4>
+<ul class="space-y-4">
+<li><a class="text-white/50 hover:text-primary text-sm transition-colors" href="#">Pricing</a></li>
+<li><a class="text-white/50 hover:text-primary text-sm transition-colors" href="#">API Access</a></li>
+<li><a class="text-white/50 hover:text-primary text-sm transition-colors" href="#">Tool Requests</a></li>
+<li><a class="text-white/50 hover:text-primary text-sm transition-colors" href="#">Affiliate</a></li>
+</ul>
+</div>
+<!-- Links Column 3: Newsletter -->
+<div class="lg:min-w-[240px]">
+<h4 class="text-white font-bold text-sm mb-6 uppercase tracking-wider">Newsletter</h4>
+<p class="text-white/50 text-xs mb-4">Get the latest AI money-making strategies.</p>
+<form class="space-y-2">
+<input class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-primary" placeholder="Email address" type="email"/>
+<button class="w-full bg-primary text-white text-sm font-bold py-2 rounded-lg hover:bg-primary/90 transition-all">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-white/5 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-white/30 text-[10px] md:text-xs">© 2024 MakeAIBucks. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-white/30 hover:text-white/60 text-[10px] md:text-xs transition-colors" href="#">Terms of Service</a>
+<a class="text-white/30 hover:text-white/60 text-[10px] md:text-xs transition-colors" href="#">Privacy Policy</a>
+<a class="text-white/30 hover:text-white/60 text-[10px] md:text-xs transition-colors" href="#">Cookies</a>
+</div>
+</div>
+</footer>
+</body></html>

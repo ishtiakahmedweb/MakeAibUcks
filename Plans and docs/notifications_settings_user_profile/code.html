@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications Settings - MakeAIBucks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a24e",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "syne": ["Syne", "sans-serif"],
+                        "dmsans": ["DM Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Syne', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-72 flex-shrink-0 border-r border-primary/10 bg-background-light dark:bg-background-dark flex flex-col">
+<div class="p-6">
+<div class="flex items-center gap-2 mb-8">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl">bolt</span>
+</div>
+<h1 class="text-xl font-syne font-bold tracking-tight text-slate-900 dark:text-slate-100">MakeAIBucks</h1>
+</div>
+<nav class="space-y-1">
+<p class="px-3 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">User Settings</p>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">person</span>
+<span class="text-sm font-medium">General Profile</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">insights</span>
+<span class="text-sm font-medium">My Activity</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">bookmark</span>
+<span class="text-sm font-medium">Saved Tools</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">shield</span>
+<span class="text-sm font-medium">Security &amp; Password</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary/20 text-primary rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1">notifications</span>
+<span class="text-sm font-medium">Notifications</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6 border-t border-primary/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="User profile avatar portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi81tjOhbcCrzkJW5YRBR60wbeD_f3hmnyjBX7Z3tFcHv3U915L_AGiUah2n_U4shs11-owD02JrVLgbR3oCL9KoSMZcd0Tgin6gp7sLRfkhrSHriT3ORv3X368UThkk3ftbzVJt8FFwmg7F5gspaTf9yQsr-JW-LDESf7YuFYjdosl29ffi24v3ywWwaFbyGz1-_h9iV-CfVQKB2pzCKjFlrtJZrTxyy9-ae6s4wrQfn2d14NT4PgYa11JAsR4cu29aiMLtjxzEk"/>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold truncate">Alex Rivera</span>
+<span class="text-xs text-slate-500">Pro Member</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark p-8 md:p-12 lg:p-16">
+<div class="max-w-3xl mx-auto">
+<header class="mb-10">
+<h1 class="text-4xl font-syne font-bold text-slate-900 dark:text-slate-100 mb-2">Notifications</h1>
+<p class="text-lg font-dmsans text-slate-600 dark:text-slate-400">Manage how you receive updates and alerts.</p>
+</header>
+<div class="space-y-8">
+<!-- Section 1: Email Notifications -->
+<section>
+<h2 class="text-xl font-syne font-bold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">mail</span>
+                            Email Notifications
+                        </h2>
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/10 rounded-xl overflow-hidden">
+<!-- Toggle Item 1 -->
+<div class="flex items-center justify-between p-5 border-b border-slate-200 dark:border-primary/10">
+<div class="flex flex-col pr-4">
+<span class="text-base font-semibold text-slate-900 dark:text-slate-100">Weekly AI Income Tips</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Receive our curated weekly newsletter with tips and tricks</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle Item 2 -->
+<div class="flex items-center justify-between p-5 border-b border-slate-200 dark:border-primary/10">
+<div class="flex flex-col pr-4">
+<span class="text-base font-semibold text-slate-900 dark:text-slate-100">New Tool Alerts</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Get notified immediately when we launch a new AI tool</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle Item 3 -->
+<div class="flex items-center justify-between p-5 border-b border-slate-200 dark:border-primary/10">
+<div class="flex flex-col pr-4">
+<span class="text-base font-semibold text-slate-900 dark:text-slate-100">Result Activity</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">When someone comments on your public result</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle Item 4 -->
+<div class="flex items-center justify-between p-5">
+<div class="flex flex-col pr-4">
+<span class="text-base font-semibold text-slate-900 dark:text-slate-100">Security Alerts</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Critical notifications about account logins and changes</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Section 2: In-App Notifications -->
+<section>
+<h2 class="text-xl font-syne font-bold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">smartphone</span>
+                            In-App Notifications
+                        </h2>
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/10 rounded-xl overflow-hidden">
+<!-- Toggle Item 1 -->
+<div class="flex items-center justify-between p-5 border-b border-slate-200 dark:border-primary/10">
+<div class="flex flex-col pr-4">
+<span class="text-base font-semibold text-slate-900 dark:text-slate-100">Tool Request Updates</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Notifications when a tool you upvoted changes status</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle Item 2 -->
+<div class="flex items-center justify-between p-5">
+<div class="flex flex-col pr-4">
+<span class="text-base font-semibold text-slate-900 dark:text-slate-100">Community Achievement</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Milestones and recognition from the community</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Footer / Save Area -->
+<footer class="pt-6 flex items-center justify-between border-t border-slate-200 dark:border-primary/10">
+<p class="text-sm text-slate-500 dark:text-slate-400">Last updated: Today at 2:14 PM</p>
+<button class="bg-primary hover:bg-primary/90 text-white font-syne font-bold px-8 py-3 rounded-lg transition-all shadow-lg shadow-primary/20 active:scale-95">
+                            Save Preferences
+                        </button>
+</footer>
+</div>
+</div>
+</main>
+</div>
+</body></html>

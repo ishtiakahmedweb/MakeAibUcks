@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;family=Syne:wght@700&amp;family=DM+Sans:wght@400;700&amp;family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a24e",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "syne": ["Syne", "sans-serif"],
+                        "dmsans": ["DM Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background: linear-gradient(150deg, #020d05, #051a09, #0c2810);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="font-display antialiased flex items-center justify-center p-6">
+<!-- Center Admin Card -->
+<div class="w-full max-w-[400px] bg-white rounded-2xl p-10 shadow-2xl flex flex-col items-center">
+<!-- Logo Section -->
+<div class="flex items-center gap-2 mb-8 text-primary">
+<div class="size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clippath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<span class="text-slate-900 text-xl font-bold tracking-tight">MakeAIBucks</span>
+</div>
+<!-- Heading -->
+<h2 class="font-syne text-[24px] text-slate-900 font-bold mb-8 text-center leading-tight">Admin Access</h2>
+<!-- Login Form -->
+<form class="w-full space-y-6" onsubmit="return false;">
+<div class="space-y-2">
+<label class="block text-slate-600 text-sm font-medium px-1">Password</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-4 pr-10 rounded-lg border border-slate-300 focus:border-primary focus:ring-1 focus:ring-primary bg-white text-slate-900 placeholder:text-slate-400 text-base transition-all" placeholder="Enter admin password" type="password"/>
+<button class="absolute right-3 text-slate-400 hover:text-slate-600 flex items-center" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<button class="w-full h-11 bg-primary hover:bg-[#15803d] text-white font-dmsans font-bold rounded-lg transition-colors flex items-center justify-center gap-2" type="submit">
+<span>Login</span>
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+</button>
+</form>
+<!-- Footer Note -->
+<div class="mt-8 text-center">
+<p class="font-dmsans text-[12px] text-slate-500 flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">gpp_maybe</span>
+                Restricted access. Authorized users only.
+            </p>
+</div>
+</div>
+<!-- Decorative background elements for premium feel -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden -z-10">
+<div class="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-primary/5 blur-[120px] rounded-full"></div>
+</div>
+</body></html>

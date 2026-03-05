@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Activity - MakeAIBucks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a24e",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "syne": ["Syne", "sans-serif"],
+                        "dmsans": ["DM Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav {
+            background-color: rgba(22, 162, 78, 0.2);
+            border-left: 4px solid #16a24e;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-72 bg-white dark:bg-[#0a140e] border-r border-slate-200 dark:border-primary/10 flex flex-col hidden lg:flex">
+<div class="p-6">
+<div class="flex flex-col mb-10">
+<h1 class="text-primary text-xl font-black leading-normal tracking-tight">MakeAIBucks</h1>
+<p class="text-slate-500 dark:text-primary/60 text-xs font-medium uppercase tracking-widest">AI Side Hustle Hub</p>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-sm font-medium">General Profile</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary active-nav rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-semibold">My Activity</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="text-sm font-medium">Saved Tools</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">lock</span>
+<span class="text-sm font-medium">Security &amp; Password</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-sm font-medium">Notifications</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6 border-t border-slate-200 dark:border-primary/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">JD</div>
+<div class="flex flex-col">
+<p class="text-sm font-bold dark:text-slate-100">John Doe</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Pro Member</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto">
+<!-- Header Section -->
+<header class="p-8 lg:p-12 border-b border-slate-200 dark:border-primary/10">
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="font-syne text-5xl lg:text-6xl text-slate-900 dark:text-white leading-none">My Activity</h2>
+<p class="font-dmsans text-slate-600 dark:text-primary/70 text-lg mt-4">Track your AI generations and history.</p>
+</div>
+<button class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+<span>Filter Activity</span>
+</button>
+</div>
+</header>
+<div class="p-8 lg:p-12 max-w-5xl mx-auto">
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="bg-white dark:bg-[#1a2e21] p-6 rounded-2xl border border-slate-200 dark:border-primary/20 shadow-sm">
+<p class="text-slate-500 dark:text-primary/60 text-sm font-semibold uppercase tracking-wider mb-2">Total Generations</p>
+<p class="text-4xl font-black text-slate-900 dark:text-white">1,284</p>
+</div>
+<div class="bg-white dark:bg-[#1a2e21] p-6 rounded-2xl border border-slate-200 dark:border-primary/20 shadow-sm">
+<p class="text-slate-500 dark:text-primary/60 text-sm font-semibold uppercase tracking-wider mb-2">Public Results</p>
+<p class="text-4xl font-black text-slate-900 dark:text-white">156</p>
+</div>
+<div class="bg-white dark:bg-[#1a2e21] p-6 rounded-2xl border border-slate-200 dark:border-primary/20 shadow-sm">
+<p class="text-slate-500 dark:text-primary/60 text-sm font-semibold uppercase tracking-wider mb-2">Saved Results</p>
+<p class="text-4xl font-black text-slate-900 dark:text-white">42</p>
+</div>
+</div>
+<!-- Timeline Feed -->
+<div class="relative">
+<!-- Vertical Line -->
+<div class="absolute left-6 top-0 bottom-0 w-0.5 bg-slate-200 dark:bg-primary/20"></div>
+<!-- Timeline Nodes -->
+<div class="space-y-12">
+<!-- Node 1: Generated Fiverr -->
+<div class="relative pl-16 group">
+<div class="absolute left-4 top-1 w-4 h-4 rounded-full bg-primary border-4 border-background-light dark:border-background-dark z-10 group-hover:scale-125 transition-transform"></div>
+<div class="bg-white dark:bg-[#1a2e21]/40 border border-slate-200 dark:border-primary/10 rounded-2xl p-6 transition-all hover:shadow-xl dark:hover:bg-[#1a2e21]/60">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<span class="bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Freelancing</span>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Generated: Fiverr Gig Writer</h3>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">2 hours ago</span>
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+</div>
+<div class="flex items-center gap-6 text-sm text-slate-600 dark:text-slate-400">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary">public</span>
+<span>Status: Public</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary">visibility</span>
+<span>Views: 12</span>
+</div>
+<a class="ml-auto text-primary font-bold hover:underline flex items-center gap-1" href="#">View Result <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+<!-- Node 2: Generated Etsy -->
+<div class="relative pl-16 group">
+<div class="absolute left-4 top-1 w-4 h-4 rounded-full bg-primary border-4 border-background-light dark:border-background-dark z-10 group-hover:scale-125 transition-transform"></div>
+<div class="bg-white dark:bg-[#1a2e21]/40 border border-slate-200 dark:border-primary/10 rounded-2xl p-6 transition-all hover:shadow-xl dark:hover:bg-[#1a2e21]/60">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<span class="bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">E-Commerce</span>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Generated: Etsy Product SEO</h3>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Yesterday</span>
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+</div>
+<div class="flex items-center gap-6 text-sm text-slate-600 dark:text-slate-400">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-slate-400">lock</span>
+<span>Status: Private</span>
+</div>
+<a class="ml-auto text-primary font-bold hover:underline flex items-center gap-1" href="#">View Result <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+<!-- Node 3: Saved YouTube -->
+<div class="relative pl-16 group">
+<div class="absolute left-4 top-1 w-4 h-4 rounded-full bg-primary border-4 border-background-light dark:border-background-dark z-10 group-hover:scale-125 transition-transform"></div>
+<div class="bg-white dark:bg-[#1a2e21]/40 border border-slate-200 dark:border-primary/10 rounded-2xl p-6 transition-all hover:shadow-xl dark:hover:bg-[#1a2e21]/60">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<span class="bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Content</span>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Saved: YouTube Script Hook</h3>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Nov 12, 2024</span>
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+</div>
+<div class="flex items-center text-sm text-slate-600 dark:text-slate-400">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary">bookmark_added</span>
+<span>Added to your saved tools repository</span>
+</div>
+<a class="ml-auto text-primary font-bold hover:underline flex items-center gap-1" href="#">View Result <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+<!-- Node 4: Commented -->
+<div class="relative pl-16 group">
+<div class="absolute left-4 top-1 w-4 h-4 rounded-full bg-primary border-4 border-background-light dark:border-background-dark z-10 group-hover:scale-125 transition-transform"></div>
+<div class="bg-white dark:bg-[#1a2e21]/40 border border-slate-200 dark:border-primary/10 rounded-2xl p-6 transition-all hover:shadow-xl dark:hover:bg-[#1a2e21]/60">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Commented on: Minimalist Logo Result</h3>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Nov 10, 2024</span>
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+</div>
+<div class="flex items-center text-sm text-slate-600 dark:text-slate-400">
+<div class="flex items-center gap-1.5 italic">
+<span class="material-symbols-outlined text-sm text-primary">chat_bubble</span>
+<span>"This prompt works exceptionally well for tech logos..."</span>
+</div>
+<a class="ml-auto text-primary font-bold hover:underline flex items-center gap-1" href="#">View Result <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-slate-200 dark:border-primary/10 pt-8">
+<p class="text-slate-500 dark:text-primary/60 text-sm">Showing <span class="text-slate-900 dark:text-white font-bold">1-10</span> of <span class="text-slate-900 dark:text-white font-bold">1,284</span> results</p>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-primary/20 bg-primary text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-primary/20 hover:border-primary transition-colors text-slate-600 dark:text-slate-400">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-primary/20 hover:border-primary transition-colors text-slate-600 dark:text-slate-400">3</button>
+<span class="text-slate-400 px-1">...</span>
+<button class="flex items-center gap-1 px-4 h-10 rounded-lg border border-slate-200 dark:border-primary/20 hover:border-primary transition-colors text-slate-600 dark:text-slate-400">
+<span>Next</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Footer Spacing -->
+<div class="h-12"></div>
+</main>
+</div>
+</body></html>

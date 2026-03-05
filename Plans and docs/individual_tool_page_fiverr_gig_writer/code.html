@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fiverr Gig Writer - MakeAIBucks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&amp;family=JetBrains+Mono:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a34a",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#020d05",
+                        "surface-dark": "#0c2810",
+                    },
+                    fontFamily: {
+                        "display": ["Syne", "sans-serif"],
+                        "body": ["DM Sans", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'DM Sans', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
+        .code-output { font-family: 'JetBrains Mono', monospace; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #020d05 0%, #0c2810 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="border-b border-white/10 bg-background-dark/50 backdrop-blur-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">currency_exchange</span>
+<span class="text-xl font-display font-extrabold tracking-tight text-white">MakeAIBucks</span>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#">Dashboard</a>
+<a class="text-primary border-b-2 border-primary py-5 text-sm font-medium transition-colors" href="#">Tools</a>
+<a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#">Resources</a>
+<a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#">Pricing</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="bg-white/5 border-white/10 rounded-lg pl-10 pr-4 py-1.5 text-sm focus:ring-primary focus:border-primary w-64 text-white" placeholder="Search tools..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all">Sign In</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-sm text-slate-400 mb-8">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Tools</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-slate-100">Fiverr Gig Writer</span>
+</nav>
+<!-- Page Header -->
+<div class="mb-10">
+<h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Fiverr Gig Writer</h1>
+<p class="text-lg text-slate-400 max-w-2xl">Generate professional, SEO-optimized Fiverr gig descriptions that convert visitors into buyers. Optimized for the 2024 algorithm.</p>
+</div>
+<!-- Main Content Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-10 gap-8">
+<!-- Left Column: Tool Interface (60%) -->
+<div class="lg:col-span-6 space-y-8">
+<!-- Input Form Card -->
+<div class="bg-surface-dark border border-white/5 rounded-xl p-6 md:p-8 shadow-2xl">
+<h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+                        Gig Configuration
+                    </h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-300">Service Type</label>
+<input class="w-full bg-background-dark/50 border-white/10 rounded-lg px-4 py-2.5 text-white focus:ring-primary focus:border-primary" placeholder="e.g. Logo Design, Blog Writing" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-300">Target Client</label>
+<input class="w-full bg-background-dark/50 border-white/10 rounded-lg px-4 py-2.5 text-white focus:ring-primary focus:border-primary" placeholder="e.g. Tech Startups, Real Estate Agents" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-300">Experience Level</label>
+<select class="w-full bg-background-dark/50 border-white/10 rounded-lg px-4 py-2.5 text-white focus:ring-primary focus:border-primary">
+<option>Beginner (0-2 years)</option>
+<option>Intermediate (3-5 years)</option>
+<option>Expert (5+ years)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-300">Key Skills (Comma separated)</label>
+<input class="w-full bg-background-dark/50 border-white/10 rounded-lg px-4 py-2.5 text-white focus:ring-primary focus:border-primary" placeholder="e.g. Photoshop, Vector, Branding" type="text"/>
+</div>
+</div>
+<div class="space-y-3">
+<label class="text-sm font-medium text-slate-300">Tone of Voice</label>
+<div class="flex flex-wrap gap-4">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="text-primary focus:ring-primary bg-background-dark border-white/20" name="tone" type="radio"/>
+<span class="text-sm text-slate-400 group-hover:text-white">Professional</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="text-primary focus:ring-primary bg-background-dark border-white/20" name="tone" type="radio"/>
+<span class="text-sm text-slate-400 group-hover:text-white">Friendly</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="text-primary focus:ring-primary bg-background-dark border-white/20" name="tone" type="radio"/>
+<span class="text-sm text-slate-400 group-hover:text-white">Persuasive</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="text-primary focus:ring-primary bg-background-dark border-white/20" name="tone" type="radio"/>
+<span class="text-sm text-slate-400 group-hover:text-white">Minimalist</span>
+</label>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all" type="button">
+<span class="material-symbols-outlined">bolt</span>
+                            Generate with AI
+                        </button>
+</form>
+</div>
+<!-- Result Card -->
+<div class="bg-background-dark/40 border border-primary/20 rounded-xl overflow-hidden shadow-xl">
+<div class="bg-primary/5 px-6 py-4 flex items-center justify-between border-b border-primary/10">
+<div class="flex items-center gap-3">
+<span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Generated</span>
+<h3 class="font-bold text-white">Your Optimized Gig Description</h3>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-white/10 rounded-lg text-slate-300 transition-colors" title="Copy to clipboard">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+<button class="p-2 hover:bg-white/10 rounded-lg text-slate-300 transition-colors" title="Save to library">
+<span class="material-symbols-outlined text-sm">bookmark</span>
+</button>
+</div>
+</div>
+<div class="p-6 md:p-8 code-output text-slate-300 leading-relaxed text-sm whitespace-pre-wrap">
+🚀 **Struggling to stand out in the crowded Logo Design marketplace?**
+
+I will design a unique, high-end minimalist logo that captures your brand's essence and leaves a lasting impression. With 5+ years of experience in branding, I've helped 200+ startups find their visual voice.
+
+**What you will get:**
+✅ 2-3 Unique Concepts from scratch
+✅ High-Resolution (300 DPI) JPG &amp; PNG files
+✅ Vector/Source files (AI, EPS, SVG)
+✅ Unlimited Revisions until you're 100% happy
+✅ Professional communication &amp; 24/7 support
+
+**Why choose me?**
+I don't just "make icons." I create visual assets that sell. My process involves deep market research and understanding your specific target audience.
+
+**Ready to level up your brand?**
+Click the green "Continue" button and let's get started on your dream logo today!
+
+*P.S. Need something custom? Drop me a message!*
+                    </div>
+</div>
+</div>
+<!-- Right Column: Sidebar (40%) -->
+<div class="lg:col-span-4 space-y-6">
+<!-- How to Use Card -->
+<div class="bg-surface-dark border border-white/5 rounded-xl p-6">
+<h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">info</span>
+                        How to use
+                    </h3>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center text-xs font-bold">1</span>
+<p class="text-sm text-slate-400">Define your service type and who your ideal customer is.</p>
+</li>
+<li class="flex gap-3">
+<span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center text-xs font-bold">2</span>
+<p class="text-sm text-slate-400">List your top 3-5 skills that make you better than the competition.</p>
+</li>
+<li class="flex gap-3">
+<span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center text-xs font-bold">3</span>
+<p class="text-sm text-slate-400">Select a tone that matches your personal style and hit generate.</p>
+</li>
+</ul>
+</div>
+<!-- Affiliate Tip Card -->
+<div class="bg-primary rounded-xl p-6 text-white relative overflow-hidden group">
+<div class="relative z-10">
+<h3 class="text-lg font-bold mb-2">Pro Seller Tip</h3>
+<p class="text-sm text-white/90 mb-4 leading-relaxed">Combine this description with our <b>AI Thumbnail Creator</b> to increase your click-through rate by up to 45%.</p>
+<a class="inline-flex items-center gap-2 bg-white text-primary px-4 py-2 rounded-lg text-sm font-bold hover:bg-slate-100 transition-colors" href="#">
+                            Try Thumbnail AI
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-white/10 text-9xl rotate-12 group-hover:rotate-0 transition-transform duration-500">lightbulb</span>
+</div>
+<!-- Similar Tools Card -->
+<div class="bg-surface-dark border border-white/5 rounded-xl p-6">
+<h3 class="text-lg font-bold text-white mb-4">Similar Tools</h3>
+<div class="space-y-3">
+<a class="flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 transition-colors group" href="#">
+<div class="w-10 h-10 rounded bg-slate-800 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">title</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-slate-200">Gig Title Optimizer</h4>
+<p class="text-xs text-slate-500">Perfect SEO titles</p>
+</div>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 transition-colors group" href="#">
+<div class="w-10 h-10 rounded bg-slate-800 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">alternate_email</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-slate-200">Buyer Request Closer</h4>
+<p class="text-xs text-slate-500">Winning templates</p>
+</div>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 transition-colors group" href="#">
+<div class="w-10 h-10 rounded bg-slate-800 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">sell</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-slate-200">Tag Research Tool</h4>
+<p class="text-xs text-slate-500">Find low-competition tags</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-background-dark border-t border-white/5 mt-20 py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-primary mb-6">
+<span class="material-symbols-outlined text-2xl">currency_exchange</span>
+<span class="text-lg font-display font-extrabold tracking-tight text-white">MakeAIBucks</span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed">
+                        The ultimate toolkit for digital entrepreneurs looking to scale their income with AI.
+                    </p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Tools</h4>
+<ul class="space-y-3 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Fiverr Writer</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Upwork Proposal AI</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Niche Finder</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pricing Calculator</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Resources</h4>
+<ul class="space-y-3 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Success Stories</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Video Tutorials</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Affiliate Program</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Discord Community</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Subscribe</h4>
+<p class="text-sm text-slate-400 mb-4">Get AI earning tips weekly.</p>
+<div class="flex gap-2">
+<input class="bg-white/5 border-white/10 rounded-lg px-4 py-2 text-sm text-white w-full focus:ring-primary focus:border-primary" placeholder="Email" type="email"/>
+<button class="bg-primary p-2 rounded-lg text-white hover:bg-primary/90">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-500">© 2024 MakeAIBucks. All rights reserved.</p>
+<div class="flex gap-6 text-xs text-slate-500">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

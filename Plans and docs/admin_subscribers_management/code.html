@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Syne:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a24e",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "syne": ["Syne", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>MakeAIBucks Admin - Subscribers</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="flex min-h-screen">
+<!-- Sidebar (220px) -->
+<aside class="w-[220px] bg-slate-950 border-r border-slate-800 flex flex-col fixed h-full">
+<div class="p-6 flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl">payments</span>
+</div>
+<div class="flex flex-col">
+<span class="text-white font-bold text-sm leading-none">MakeAIBucks</span>
+<span class="text-slate-500 text-[10px] uppercase tracking-wider font-semibold">Admin Panel</span>
+</div>
+</div>
+<nav class="flex-1 px-3 py-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-white hover:bg-slate-900 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-primary bg-primary/10 border-l-2 border-primary rounded-r-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px] fill-1">group</span>
+<span class="text-sm font-medium">Subscribers</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-white hover:bg-slate-900 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">build</span>
+<span class="text-sm font-medium">Admin Tools</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-white hover:bg-slate-900 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span class="text-sm font-medium">Results</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-white rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+<div class="mt-4 flex items-center gap-3 px-3 py-2">
+<div class="size-8 rounded-full bg-slate-800 overflow-hidden">
+<img alt="Admin Avatar" data-alt="Close up of a professional male administrator avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFyBnYwCUWrQcIUYaqduXCh9frwP90YVV_2X09I3Gwr9w1ArUYPAnXvW4xos2n8pXpQUk_o06G5lv9ld-mf6BhoBusfCJCjHjIyYLYG3pbIKymdtHX1zR85jEvcArYx6QFSIvpd4vzT3hkBkJpEeaYdpkTxwIVqL6h-iMh5GmghomLy6M5lzWj9qMrJ_7fJORC6Gn6ldkx7FzED2a2B5EfiIfKoMoiHP6LP0jQN3ybnyuGOjhZ9i3mmrvvlieZWnSv5dPJlAKe1vM"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-bold text-white truncate">Admin User</span>
+<span class="text-[10px] text-slate-500 truncate">admin@makeaibucks.com</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Content Area -->
+<main class="flex-1 ml-[220px] p-8">
+<!-- Content Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div class="flex items-center gap-4">
+<h1 class="font-syne text-2xl font-bold text-slate-900 dark:text-white">Subscribers</h1>
+<span class="px-3 py-1 bg-primary/20 text-primary text-xs font-bold rounded-full">15,422 Total</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="pl-10 pr-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all w-64" placeholder="Search emails..." type="text"/>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+                        Export CSV
+                    </button>
+</div>
+</div>
+<!-- Subscriber Table Container -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 border-bottom border-slate-200 dark:border-slate-800">
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Email</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Date Joined</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Status</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+<!-- Row 1 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm text-slate-900 dark:text-slate-100 font-medium">user1@example.com</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">Oct 24, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary">
+                                        Subscribed
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-rose-500 hover:text-rose-600 font-bold text-xs uppercase tracking-tight transition-colors">Delete</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm text-slate-900 dark:text-slate-100 font-medium">user2@gmail.com</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">Oct 22, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500">
+                                        Unsubscribed
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-rose-500 hover:text-rose-600 font-bold text-xs uppercase tracking-tight transition-colors">Delete</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm text-slate-900 dark:text-slate-100 font-medium">hello@startup.io</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">Oct 21, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary">
+                                        Subscribed
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-rose-500 hover:text-rose-600 font-bold text-xs uppercase tracking-tight transition-colors">Delete</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm text-slate-900 dark:text-slate-100 font-medium">dev_tester@firm.com</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">Oct 19, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary">
+                                        Subscribed
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-rose-500 hover:text-rose-600 font-bold text-xs uppercase tracking-tight transition-colors">Delete</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm text-slate-900 dark:text-slate-100 font-medium">member@club.org</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">Oct 15, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500">
+                                        Unsubscribed
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-rose-500 hover:text-rose-600 font-bold text-xs uppercase tracking-tight transition-colors">Delete</button>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm text-slate-900 dark:text-slate-100 font-medium">marketing@brand.co</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">Oct 12, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary">
+                                        Subscribed
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-rose-500 hover:text-rose-600 font-bold text-xs uppercase tracking-tight transition-colors">Delete</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-6 py-4 flex items-center justify-between border-t border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900">
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                        Showing <span class="font-semibold">1</span> to <span class="font-semibold">6</span> of <span class="font-semibold">15,422</span> results
+                    </p>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary transition-colors disabled:opacity-50">
+                            Previous
+                        </button>
+<button class="size-8 flex items-center justify-center rounded-lg bg-primary text-white text-sm font-bold">1</button>
+<button class="size-8 flex items-center justify-center rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 text-sm font-medium transition-colors">2</button>
+<button class="size-8 flex items-center justify-center rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 text-sm font-medium transition-colors">3</button>
+<span class="px-1 text-slate-400">...</span>
+<button class="px-3 py-1 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+                            Next
+                        </button>
+</div>
+</div>
+</div>
+<!-- Empty State / Help Section Footer -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 bg-primary/5 border border-primary/20 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-2">person_add</span>
+<h3 class="text-sm font-bold mb-1">Add Subscriber</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Manually add a new subscriber to your email mailing list.</p>
+</div>
+<div class="p-6 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl">
+<span class="material-symbols-outlined text-slate-400 mb-2">mail</span>
+<h3 class="text-sm font-bold mb-1">Email Campaigns</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Send an automated message to all your active subscribers.</p>
+</div>
+<div class="p-6 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl">
+<span class="material-symbols-outlined text-slate-400 mb-2">bar_chart</span>
+<h3 class="text-sm font-bold mb-1">Growth Metrics</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">View detailed analytics of subscriber growth over time.</p>
+</div>
+</div>
+</main>
+</div>
+</body></html>

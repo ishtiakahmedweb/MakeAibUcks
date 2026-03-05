@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Categories - MakeAIBucks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Syne:wght@800&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a24e",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "syne": ["Syne", "sans-serif"],
+                        "dmsans": ["DM Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .hero-gradient {
+            background: linear-gradient(150deg, #020d05, #051a09, #0c2810);
+            position: relative;
+        }
+        .hero-gradient::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .text-green-gradient {
+            background: linear-gradient(135deg, #4ade80, #86efac);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<!-- Section 1: Navbar -->
+<nav class="sticky top-0 z-50 w-full border-b border-slate-200/20 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="mx-auto flex max-w-[960px] items-center justify-between px-6 py-4">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl font-bold">payments</span>
+<h2 class="text-xl font-extrabold tracking-tight dark:text-white">MakeAIBucks</h2>
+</div>
+<div class="hidden items-center gap-6 md:flex">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Tools</a>
+<div class="relative flex flex-col items-center">
+<a class="text-sm font-bold text-primary" href="#">Categories</a>
+<span class="absolute -bottom-1 h-1.5 w-1.5 rounded-full bg-primary"></span>
+</div>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Guides</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden text-sm font-medium md:block hover:text-primary transition-colors">Log In</button>
+<button class="rounded-lg bg-primary px-5 py-2 text-sm font-bold text-white transition-all hover:bg-primary/90">
+                    Sign Up
+                </button>
+</div>
+</div>
+</nav>
+<!-- Section 1: Mini Dark Hero -->
+<header class="hero-gradient overflow-hidden px-6 py-[40px] text-center">
+<div class="relative z-10 mx-auto max-w-[960px]">
+<h1 class="font-syne text-[44px] font-extrabold leading-tight text-white">
+                Browse by <span class="text-green-gradient">Category</span>
+</h1>
+<p class="mx-auto mt-2 max-w-xl font-dmsans text-base leading-normal text-white/70">
+                Find specialized AI tools for your specific income stream.
+            </p>
+<div class="absolute -top-24 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-primary/20 blur-[100px]"></div>
+</div>
+</header>
+<!-- Section 2: Category Cards Grid -->
+<main class="bg-white dark:bg-slate-900 px-6 py-[56px]">
+<div class="mx-auto grid max-w-[960px] gap-8 md:grid-cols-2">
+<!-- Category 1: Freelancing -->
+<div class="overflow-hidden rounded-xl border-[1.5px] border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+<div class="h-2 w-full bg-[#3b82f6]"></div>
+<div class="p-8">
+<div class="mb-6 flex items-center justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#3b82f6]/10 text-[#3b82f6]">
+<span class="material-symbols-outlined">work</span>
+</div>
+<span class="rounded-full bg-[#3b82f6]/10 px-3 py-1 text-xs font-bold text-[#3b82f6]">42 tools</span>
+</div>
+<h3 class="font-syne text-2xl font-extrabold text-slate-900 dark:text-white">Freelancing</h3>
+<p class="mt-2 font-dmsans text-[15px] leading-relaxed text-slate-500 dark:text-slate-400">
+                        Tools for Fiverr, Upwork, cold outreach, and freelance business management.
+                    </p>
+<div class="mt-6 flex flex-wrap gap-x-4 gap-y-2">
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> Jasper</span>
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> Upwork</span>
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> Hunter</span>
+</div>
+<button class="mt-8 w-full rounded-xl bg-[#3b82f6] py-3 font-dmsans text-sm font-bold text-white transition-opacity hover:opacity-90">
+                        Browse Freelancing Tools →
+                    </button>
+</div>
+</div>
+<!-- Category 2: E-Commerce -->
+<div class="overflow-hidden rounded-xl border-[1.5px] border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+<div class="h-2 w-full bg-[#f59e0b]"></div>
+<div class="p-8">
+<div class="mb-6 flex items-center justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#f59e0b]/10 text-[#f59e0b]">
+<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+<span class="rounded-full bg-[#f59e0b]/10 px-3 py-1 text-xs font-bold text-[#f59e0b]">38 tools</span>
+</div>
+<h3 class="font-syne text-2xl font-extrabold text-slate-900 dark:text-white">E-Commerce</h3>
+<p class="mt-2 font-dmsans text-[15px] leading-relaxed text-slate-500 dark:text-slate-400">
+                        Tools for Etsy, Amazon, Shopify, dropshipping, and print-on-demand sellers.
+                    </p>
+<div class="mt-6 flex flex-wrap gap-x-4 gap-y-2">
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> Shopify</span>
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> Helium10</span>
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> Printful</span>
+</div>
+<button class="mt-8 w-full rounded-xl bg-[#f59e0b] py-3 font-dmsans text-sm font-bold text-white transition-opacity hover:opacity-90">
+                        Browse E-Commerce Tools →
+                    </button>
+</div>
+</div>
+<!-- Category 3: Content Creation -->
+<div class="overflow-hidden rounded-xl border-[1.5px] border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+<div class="h-2 w-full bg-[#8b5cf6]"></div>
+<div class="p-8">
+<div class="mb-6 flex items-center justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#8b5cf6]/10 text-[#8b5cf6]">
+<span class="material-symbols-outlined">play_circle</span>
+</div>
+<span class="rounded-full bg-[#8b5cf6]/10 px-3 py-1 text-xs font-bold text-[#8b5cf6]">56 tools</span>
+</div>
+<h3 class="font-syne text-2xl font-extrabold text-slate-900 dark:text-white">Content Creation</h3>
+<p class="mt-2 font-dmsans text-[15px] leading-relaxed text-slate-500 dark:text-slate-400">
+                        Tools for YouTube, blogs, newsletters, Twitter threads, and Instagram.
+                    </p>
+<div class="mt-6 flex flex-wrap gap-x-4 gap-y-2">
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> TubeBuddy</span>
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> Beehiiv</span>
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> Canva</span>
+</div>
+<button class="mt-8 w-full rounded-xl bg-[#8b5cf6] py-3 font-dmsans text-sm font-bold text-white transition-opacity hover:opacity-90">
+                        Browse Content Tools →
+                    </button>
+</div>
+</div>
+<!-- Category 4: Business Growth -->
+<div class="overflow-hidden rounded-xl border-[1.5px] border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+<div class="h-2 w-full bg-[#14b8a6]"></div>
+<div class="p-8">
+<div class="mb-6 flex items-center justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#14b8a6]/10 text-[#14b8a6]">
+<span class="material-symbols-outlined">bar_chart</span>
+</div>
+<span class="rounded-full bg-[#14b8a6]/10 px-3 py-1 text-xs font-bold text-[#14b8a6]">29 tools</span>
+</div>
+<h3 class="font-syne text-2xl font-extrabold text-slate-900 dark:text-white">Business Growth</h3>
+<p class="mt-2 font-dmsans text-[15px] leading-relaxed text-slate-500 dark:text-slate-400">
+                        Tools for naming, planning, and finding the right AI-powered side hustle.
+                    </p>
+<div class="mt-6 flex flex-wrap gap-x-4 gap-y-2">
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> Namelix</span>
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> Notion</span>
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> Pitch</span>
+</div>
+<button class="mt-8 w-full rounded-xl bg-[#14b8a6] py-3 font-dmsans text-sm font-bold text-white transition-opacity hover:opacity-90">
+                        Browse Growth Tools →
+                    </button>
+</div>
+</div>
+<!-- Category 5: Prompt Engineering -->
+<div class="overflow-hidden rounded-xl border-[1.5px] border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950 md:col-span-2 md:max-w-md md:mx-auto w-full">
+<div class="h-2 w-full bg-primary"></div>
+<div class="p-8">
+<div class="mb-6 flex items-center justify-between">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined">colors_spark</span>
+</div>
+<span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">15 tools</span>
+</div>
+<h3 class="font-syne text-2xl font-extrabold text-slate-900 dark:text-white">Prompt Engineering</h3>
+<p class="mt-2 font-dmsans text-[15px] leading-relaxed text-slate-500 dark:text-slate-400">
+                        Tools for building powerful AI prompts and creating sellable prompt packs.
+                    </p>
+<div class="mt-6 flex flex-wrap gap-x-4 gap-y-2">
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> PromptBase</span>
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> Midjourney</span>
+<span class="flex items-center gap-1.5 font-dmsans text-[13px] text-slate-500"><span class="h-1 w-1 rounded-full bg-slate-400"></span> AIPRM</span>
+</div>
+<button class="mt-8 w-full rounded-xl bg-primary py-3 font-dmsans text-sm font-bold text-white transition-opacity hover:opacity-90">
+                        Browse Prompt Tools →
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Section 3: Footer -->
+<footer class="bg-[#020617] py-16 text-white">
+<div class="mx-auto max-w-[960px] px-6">
+<div class="grid gap-12 sm:grid-cols-2 md:grid-cols-4">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">payments</span>
+<h2 class="text-xl font-extrabold tracking-tight text-white">MakeAIBucks</h2>
+</div>
+<p class="mt-4 text-sm leading-relaxed text-slate-400">
+                        Empowering creators and entrepreneurs with the best AI tools to scale their income.
+                    </p>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-wider text-white">Resources</h4>
+<ul class="mt-4 space-y-2 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">AI Tools Directory</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Success Guides</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Income Reports</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-wider text-white">Categories</h4>
+<ul class="mt-4 space-y-2 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Freelancing</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">E-Commerce</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Content Creation</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Prompt Engineering</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-wider text-white">Legal</h4>
+<ul class="mt-4 space-y-2 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-16 border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+<p>© 2024 MakeAIBucks. All rights reserved. Helping you earn with AI.</p>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;family=JetBrains+Mono:ital@0;1&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16a34a",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#020d05",
+                        "card-border": "rgba(22, 163, 74, 0.2)",
+                    },
+                    fontFamily: {
+                        "display": ["Syne", "sans-serif"],
+                        "body": ["DM Sans", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Public Results - MakeAIBucks</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body text-slate-900 dark:text-slate-100 antialiased">
+<!-- Section 1: Standard Navbar -->
+<header class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
+<div class="mx-auto max-w-[1100px] px-4 md:px-6">
+<div class="flex h-16 items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center gap-2">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+<span class="font-display text-xl font-bold tracking-tight text-white">MakeAI<span class="text-primary">Bucks</span></span>
+</div>
+<!-- Navigation -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#">Tools</a>
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#">Categories</a>
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#">Requests</a>
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#">How It Works</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-300 hover:text-white transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="hidden sm:flex items-center justify-center rounded-lg bg-primary px-5 py-2 text-sm font-bold text-white hover:bg-primary/90 transition-all">
+                        Get Started Free
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<!-- Section 2: Page Header -->
+<section class="relative overflow-hidden bg-gradient-to-b from-[#020d05] to-[#0c2810] py-20">
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 2px 2px, #16a34a 1px, transparent 0); background-size: 40px 40px;"></div>
+<div class="mx-auto max-w-[1100px] px-4 md:px-6 relative z-10 text-center">
+<h1 class="font-display text-5xl md:text-6xl font-extrabold tracking-tighter text-white mb-4">
+                Public <span class="bg-gradient-to-r from-primary to-green-300 bg-clip-text text-transparent">Results</span>
+</h1>
+<p class="text-lg text-slate-400 mb-10 max-w-xl mx-auto">See what others generated and get inspired for your next AI-powered income stream.</p>
+<!-- Stats -->
+<div class="flex flex-wrap justify-center items-center gap-6">
+<div class="flex flex-col items-center px-8 py-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
+<span class="text-sm font-medium text-slate-400 uppercase tracking-widest">Total Results</span>
+<span class="text-3xl font-display font-bold text-white">12,450</span>
+</div>
+<div class="flex flex-col items-center px-8 py-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
+<div class="flex items-center gap-2 mb-1">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-sm font-medium text-slate-400 uppercase tracking-widest">Status</span>
+</div>
+<span class="text-xl font-display font-bold text-white">Updated live</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Filter + Results -->
+<section class="bg-slate-50 dark:bg-slate-900/50 py-12 min-h-screen">
+<div class="mx-auto max-w-[1100px] px-4 md:px-6">
+<!-- Sticky Filter Bar -->
+<div class="sticky top-[65px] z-40 mb-10 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-3 shadow-sm flex flex-col lg:flex-row items-center gap-4">
+<!-- Category Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 lg:pb-0 no-scrollbar w-full lg:w-auto">
+<button class="whitespace-nowrap rounded-full bg-primary px-4 py-1.5 text-sm font-bold text-white">All</button>
+<button class="whitespace-nowrap rounded-full bg-slate-100 dark:bg-slate-800 px-4 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700">Freelancing</button>
+<button class="whitespace-nowrap rounded-full bg-slate-100 dark:bg-slate-800 px-4 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700">E-Commerce</button>
+<button class="whitespace-nowrap rounded-full bg-slate-100 dark:bg-slate-800 px-4 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700">Marketing</button>
+<button class="whitespace-nowrap rounded-full bg-slate-100 dark:bg-slate-800 px-4 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700">Content</button>
+</div>
+<!-- Search & Sort -->
+<div class="flex items-center gap-3 w-full lg:w-auto ml-auto">
+<div class="relative flex-1 lg:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 pl-10 pr-4 py-2 text-sm focus:border-primary focus:ring-primary" placeholder="Search results..." type="text"/>
+</div>
+<select class="rounded-lg border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 py-2 pl-4 pr-10 text-sm font-medium focus:border-primary focus:ring-primary">
+<option>Sort by: Newest</option>
+<option>Sort by: Most Viewed</option>
+<option>Sort by: Trending</option>
+</select>
+</div>
+</div>
+<!-- Results Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group flex flex-col rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-bold text-primary">Freelancing</span>
+<span class="text-xs text-slate-400 font-medium">2 mins ago</span>
+</div>
+<h3 class="font-display text-xl font-semibold leading-tight text-slate-900 dark:text-white mb-3">Professional Upwork Profile Bio for Logo Designers</h3>
+<div class="mb-4 rounded-lg bg-slate-50 dark:bg-slate-900/50 p-3">
+<span class="text-[10px] uppercase tracking-wider font-bold text-slate-400 block mb-1">Input Summary</span>
+<p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">Logo design expert, 5 years experience, minimal style, fast delivery...</p>
+</div>
+<div class="mb-6 flex-grow border-l-2 border-primary pl-4">
+<p class="font-mono text-sm italic text-slate-700 dark:text-slate-300 line-clamp-4">
+                            "I help brands stand out through minimalist visual identities. With over 500+ successful projects completed, my process ensures..."
+                        </p>
+</div>
+<div class="mt-auto flex items-center justify-between border-t border-slate-100 dark:border-slate-900 pt-4">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span class="text-xs font-medium">1,240 views</span>
+</div>
+<a class="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                            View Result <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center rounded-full bg-blue-500/10 px-2.5 py-0.5 text-xs font-bold text-blue-500">E-Commerce</span>
+<span class="text-xs text-slate-400 font-medium">15 mins ago</span>
+</div>
+<h3 class="font-display text-xl font-semibold leading-tight text-slate-900 dark:text-white mb-3">High-Converting Amazon Product Title &amp; Bullet Points</h3>
+<div class="mb-4 rounded-lg bg-slate-50 dark:bg-slate-900/50 p-3">
+<span class="text-[10px] uppercase tracking-wider font-bold text-slate-400 block mb-1">Input Summary</span>
+<p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">Stainless steel water bottle, 32oz, insulated, BPA free, leak-proof cap...</p>
+</div>
+<div class="mb-6 flex-grow border-l-2 border-primary pl-4">
+<p class="font-mono text-sm italic text-slate-700 dark:text-slate-300 line-clamp-4">
+                            "Premium 32oz Insulated Stainless Steel Water Bottle - Vacuum Sealed, Leak Proof, Keeps Cold for 24h &amp; Hot for 12h - Eco-Friendly..."
+                        </p>
+</div>
+<div class="mt-auto flex items-center justify-between border-t border-slate-100 dark:border-slate-900 pt-4">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span class="text-xs font-medium">856 views</span>
+</div>
+<a class="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                            View Result <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center rounded-full bg-purple-500/10 px-2.5 py-0.5 text-xs font-bold text-purple-500">Marketing</span>
+<span class="text-xs text-slate-400 font-medium">45 mins ago</span>
+</div>
+<h3 class="font-display text-xl font-semibold leading-tight text-slate-900 dark:text-white mb-3">Viral Instagram Reels Script for SaaS Founders</h3>
+<div class="mb-4 rounded-lg bg-slate-50 dark:bg-slate-900/50 p-3">
+<span class="text-[10px] uppercase tracking-wider font-bold text-slate-400 block mb-1">Input Summary</span>
+<p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">Efficiency tools for teams, problem-solution-cta hook, 30 seconds...</p>
+</div>
+<div class="mb-6 flex-grow border-l-2 border-primary pl-4">
+<p class="font-mono text-sm italic text-slate-700 dark:text-slate-300 line-clamp-4">
+                            "[HOOK] Stop losing 10 hours a week on meetings. [PROBLEM] Most teams think communication means more calls. [SOLUTION] Use this..."
+                        </p>
+</div>
+<div class="mt-auto flex items-center justify-between border-t border-slate-100 dark:border-slate-900 pt-4">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span class="text-xs font-medium">2.1k views</span>
+</div>
+<a class="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                            View Result <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group flex flex-col rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center rounded-full bg-orange-500/10 px-2.5 py-0.5 text-xs font-bold text-orange-500">Content</span>
+<span class="text-xs text-slate-400 font-medium">1 hour ago</span>
+</div>
+<h3 class="font-display text-xl font-semibold leading-tight text-slate-900 dark:text-white mb-3">Engaging Blog Post Outline on AI in Real Estate</h3>
+<div class="mb-4 rounded-lg bg-slate-50 dark:bg-slate-900/50 p-3">
+<span class="text-[10px] uppercase tracking-wider font-bold text-slate-400 block mb-1">Input Summary</span>
+<p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">Future of house hunting, virtual tours, predictive pricing, blog post...</p>
+</div>
+<div class="mb-6 flex-grow border-l-2 border-primary pl-4">
+<p class="font-mono text-sm italic text-slate-700 dark:text-slate-300 line-clamp-4">
+                            "H1: The Silicon Key: How AI is Unlocking the Future of Real Estate. Intro: The shifting landscape of property search..."
+                        </p>
+</div>
+<div class="mt-auto flex items-center justify-between border-t border-slate-100 dark:border-slate-900 pt-4">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span class="text-xs font-medium">432 views</span>
+</div>
+<a class="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                            View Result <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group flex flex-col rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-bold text-primary">Freelancing</span>
+<span class="text-xs text-slate-400 font-medium">2 hours ago</span>
+</div>
+<h3 class="font-display text-xl font-semibold leading-tight text-slate-900 dark:text-white mb-3">Project Proposal for Web Development Clients</h3>
+<div class="mb-4 rounded-lg bg-slate-50 dark:bg-slate-900/50 p-3">
+<span class="text-[10px] uppercase tracking-wider font-bold text-slate-400 block mb-1">Input Summary</span>
+<p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">React developer, custom e-commerce site, 4 week timeline, maintenance plan...</p>
+</div>
+<div class="mb-6 flex-grow border-l-2 border-primary pl-4">
+<p class="font-mono text-sm italic text-slate-700 dark:text-slate-300 line-clamp-4">
+                            "Objective: To deliver a scalable, high-performance storefront that converts. Proposed Solution: Modern tech stack featuring Next.js..."
+                        </p>
+</div>
+<div class="mt-auto flex items-center justify-between border-t border-slate-100 dark:border-slate-900 pt-4">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span class="text-xs font-medium">920 views</span>
+</div>
+<a class="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                            View Result <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group flex flex-col rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center rounded-full bg-blue-500/10 px-2.5 py-0.5 text-xs font-bold text-blue-500">E-Commerce</span>
+<span class="text-xs text-slate-400 font-medium">3 hours ago</span>
+</div>
+<h3 class="font-display text-xl font-semibold leading-tight text-slate-900 dark:text-white mb-3">Facebook Ad Copy for Pet Accessory Brand</h3>
+<div class="mb-4 rounded-lg bg-slate-50 dark:bg-slate-900/50 p-3">
+<span class="text-[10px] uppercase tracking-wider font-bold text-slate-400 block mb-1">Input Summary</span>
+<p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">Luxury dog beds, orthopaedic, machine washable, limited sale...</p>
+</div>
+<div class="mb-6 flex-grow border-l-2 border-primary pl-4">
+<p class="font-mono text-sm italic text-slate-700 dark:text-slate-300 line-clamp-4">
+                            "Because they're more than just pets. Give your best friend the sleep they deserve with our Ortho-Cloud series. [CTA] Shop 30% Off Now!"
+                        </p>
+</div>
+<div class="mt-auto flex items-center justify-between border-t border-slate-100 dark:border-slate-900 pt-4">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span class="text-xs font-medium">1.5k views</span>
+</div>
+<a class="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                            View Result <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Section 4: Load More Results -->
+<div class="mt-16 flex justify-center">
+<button class="flex items-center gap-2 rounded-lg border-2 border-primary bg-transparent px-8 py-3 text-sm font-bold text-primary hover:bg-primary hover:text-white transition-all">
+                    Load More Results
+                    <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 5: Standard Footer -->
+<footer class="bg-[#020617] text-white py-16">
+<div class="mx-auto max-w-[1100px] px-4 md:px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+<span class="font-display text-xl font-bold tracking-tight">MakeAI<span class="text-primary">Bucks</span></span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed">Empowering the next generation of digital entrepreneurs with AI-powered tools and strategies.</p>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest text-slate-200 mb-6">Tools</h4>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Gig Generator</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Market Analysis</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Ad Copy Genius</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pricing Optimizer</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest text-slate-200 mb-6">Company</h4>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest text-slate-200 mb-6">Newsletter</h4>
+<p class="text-xs text-slate-400 mb-4">Get the latest AI side hustles delivered to your inbox.</p>
+<div class="flex items-center gap-2">
+<input class="w-full rounded-lg border-white/10 bg-white/5 px-3 py-2 text-xs focus:border-primary focus:ring-primary" placeholder="Email address" type="email"/>
+<button class="rounded-lg bg-primary p-2 text-white hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-xs text-slate-500">© 2024 MakeAIBucks. All rights reserved.</p>
+<div class="flex gap-6 text-xs text-slate-500">
+<a class="hover:text-slate-300" href="#">Privacy Policy</a>
+<a class="hover:text-slate-300" href="#">Terms of Service</a>
+<a class="hover:text-slate-300" href="#">Cookie Settings</a>
+</div>
+<div class="flex gap-4">
+<a class="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<img alt="Twitter" data-alt="Social media icon twitter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL-xmffg2oAj0Vd9FX5v6NJtLdzhbzUqCJW0gBHkEcOdWWiqtaA0Ev7tR3mMduxtLOtcqoE1FbaLXKIuLX8tYEa3G1nxfjO4e9Zz37692W8-RPcrNAlEAgMB0Oo9ZNTgCsq0AH-4AutBO-KSfFzIMg_hymvpfnogPm5C3ZLaUd6h_cDLIPlBiuk6qgXDs4ypdMd0Jam6QMLMDykUsW1dqgzc26wO1Ai31K_phQwdLj0r1WHk6D66ZoAQaIlsWPd7Enmf8B6aE_YRs"/>
+</a>
+<a class="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<img alt="LinkedIn" data-alt="Social media icon linkedin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl7mNcgKmmKcMC-92avO6UrC6oLEfAyPa37NaUnYVdcD3VMKfOCCDEf5E5FwUU-eHKNkzzf3xFmJVJdMgxdKWyPhUM6E4ttvOEoII8aFb2wwhOyN--eVerPdgM8XPeBPA5BIE5Fmbry0Aq-Pz4g6vnvqgmD3jOp6NnKjGn-IHG5U0aOtgUiXPbrMQx2LCQPhmGRToIXoc2yjmEfpEQVJPNFETyYb0oHjy6sXbDokWeEWFNvyuqIwnFOQbWqFGsFAgsBG1OsJU7wLo"/>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
