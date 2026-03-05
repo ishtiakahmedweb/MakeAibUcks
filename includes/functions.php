@@ -106,3 +106,35 @@ function verifyCsrf() {
         jsonError('Invalid CSRF token', 403);
     }
 }
+
+/**
+ * Get all categories with tool counts
+ */
+function getCategories($withCount = false) {
+    if ($withCount) {
+        return db()->fetchAll("
+            SELECT c.*, COUNT(t.id) as tool_count 
+            FROM categories c 
+            LEFT JOIN tools t ON c.slug = t.category_slug AND t.is_active = 1
+            GROUP BY c.id 
+            ORDER BY c.sort_order ASC
+        ");
+    }
+    return db()->fetchAll("SELECT * FROM categories ORDER BY sort_order ASC");
+}
+
+/**
+ * Check if sidebar item is active
+ */
+function isActive($slug, $current) {
+    return $slug === $current 
+        ? 'bg-primary/10 text-primary border-primary' 
+        : 'text-slate-400 hover:text-white hover:bg-slate-800/50 border-transparent';
+}
+
+/**
+ * Escape HTML
+ */
+function h($text) {
+    return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+}
