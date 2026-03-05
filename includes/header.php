@@ -60,6 +60,22 @@
         .reveal { opacity: 0; transform: translateY(14px); transition: all 0.6s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
+
+    <!-- Google Analytics Placeholder -->
+    <?php if ($gaId = getSetting('analytics_id')): ?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?= $gaId ?>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '<?= $gaId ?>');
+    </script>
+    <?php endif; ?>
+
+    <!-- AdSense Auto-Ads Placeholder -->
+    <?php if ($adsCode = getSetting('adsense_code')): ?>
+    <?= $adsCode ?>
+    <?php endif; ?>
 </head>
 <body class="bg-bg-page text-slate-900">
 

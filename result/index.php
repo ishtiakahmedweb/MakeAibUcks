@@ -104,6 +104,8 @@ include '../includes/header.php';
                     <?= $result['output_text'] ?>
                 </div>
 
+                <?= getAdPlaceholder('horizontal') ?>
+
                 <!-- Actions -->
                 <div class="flex flex-wrap gap-4 pt-12 border-t border-slate-100">
                     <button onclick="copyCurrentUrl()" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-black text-sm flex items-center gap-3 hover:bg-black transition-all">

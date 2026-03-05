@@ -152,3 +152,18 @@ function getSetting($key, $default = '') {
     }
     return $settings[$key] ?? $default;
 }
+
+/**
+ * Return AdSense placeholder div
+ */
+function getAdPlaceholder($type = 'horizontal') {
+    if (!getSetting('adsense_code')) return '<!-- AdSense Not Configured -->';
+    
+    $classes = [
+        'horizontal' => 'w-full h-24 bg-slate-50 border border-dashed border-slate-200 flex items-center justify-center text-[10px] font-black text-slate-300 uppercase tracking-widest my-8 rounded-2xl',
+        'sidebar'    => 'w-full h-64 bg-slate-50 border border-dashed border-slate-200 flex items-center justify-center text-[10px] font-black text-slate-300 uppercase tracking-widest my-6 rounded-2xl',
+        'square'     => 'w-full aspect-square bg-slate-50 border border-dashed border-slate-200 flex items-center justify-center text-[10px] font-black text-slate-300 uppercase tracking-widest my-8 rounded-2xl'
+    ][$type] ?? '';
+    
+    return "<div class=\"$classes\">Advertisement</div>";
+}

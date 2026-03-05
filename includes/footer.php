@@ -29,7 +29,7 @@
             <ul class="space-y-4 text-sm">
                 <li><a class="hover:text-primary transition-colors" href="<?= url('tools') ?>">All Tools</a></li>
                 <li><a class="hover:text-primary transition-colors" href="<?= url('categories') ?>">Categories</a></li>
-                <li><a class="hover:text-primary transition-colors" href="<?= url('results') ?>">Public Results</a></li>
+                <li><a class="hover:text-primary transition-colors" href="<?= url('my-activity') ?>">My Activity</a></li>
                 <li><a class="hover:text-primary transition-colors" href="<?= url('requests') ?>">Request a Tool</a></li>
             </ul>
         </div>
@@ -37,9 +37,9 @@
             <h5 class="text-white font-bold mb-6">Company</h5>
             <ul class="space-y-4 text-sm">
                 <li><a class="hover:text-primary transition-colors" href="<?= url('about') ?>">About Us</a></li>
-                <li><a class="hover:text-primary transition-colors" href="<?= url('about') ?>">How It Works</a></li>
-                <li><a class="hover:text-primary transition-colors" href="<?= url('contact') ?>">Contact</a></li>
+                <li><a class="hover:text-primary transition-colors" href="<?= url('contact') ?>">Contact Support</a></li>
                 <li><a class="hover:text-primary transition-colors" href="<?= url('privacy') ?>">Privacy Policy</a></li>
+                <li><a class="hover:text-primary transition-colors" href="<?= url('terms') ?>">Terms of Service</a></li>
             </ul>
         </div>
     </div>

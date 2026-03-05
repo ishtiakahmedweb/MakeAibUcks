@@ -118,6 +118,8 @@ include '../includes/header.php';
                     </form>
                 </div>
 
+                <?= getAdPlaceholder('horizontal') ?>
+
                 <!-- Result Container (Hidden until generated) -->
                 <div id="result-container" class="hidden animate-in fade-in slide-in-from-bottom-4 duration-700">
                     <div class="bg-bg-sidebar border border-white/10 rounded-[40px] overflow-hidden shadow-2xl">
