@@ -82,6 +82,7 @@
         <div class="hidden md:flex items-center gap-6">
             <a class="text-sm font-semibold hover:text-primary transition-colors" href="<?= url('tools') ?>">Tools</a>
             <a class="text-sm font-semibold hover:text-primary transition-colors" href="<?= url('categories') ?>">Categories</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="<?= url('my-activity') ?>">My Activity</a>
             <a class="text-sm font-semibold hover:text-primary transition-colors" href="<?= url('requests') ?>">Requests</a>
             <a class="text-sm font-semibold hover:text-primary transition-colors" href="<?= url('about') ?>">How It Works</a>
         </div>

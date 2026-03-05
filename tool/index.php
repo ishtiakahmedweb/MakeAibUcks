@@ -106,10 +106,15 @@ include '../includes/header.php';
                             <?php endforeach; ?>
                         </div>
 
-                        <button type="submit" id="generate-btn" class="w-full bg-primary hover:bg-primary-dark text-white py-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 shadow-2xl shadow-primary/20 transition-all hover:scale-[1.02] active:scale-95">
-                            <span class="material-symbols-outlined">bolt</span>
-                            GENERATE NOW
-                        </button>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button type="submit" id="generate-btn" class="flex-1 bg-primary hover:bg-primary-dark text-white py-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 shadow-2xl shadow-primary/20 transition-all hover:scale-[1.02] active:scale-95">
+                                <span class="material-symbols-outlined">bolt</span>
+                                GENERATE NOW
+                            </button>
+                            <button type="button" onclick="toggleBookmark('<?= h($slug) ?>')" id="bookmark-btn" class="bg-white border border-slate-200 text-slate-400 hover:text-primary hover:border-primary px-8 rounded-2xl transition-all flex items-center justify-center group">
+                                <span class="material-symbols-outlined group-hover:fill-1 transition-all">bookmark</span>
+                            </button>
+                        </div>
                     </form>
                 </div>
 

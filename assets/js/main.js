@@ -52,11 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = newsletterForm.querySelector('input[name="email"]').value;
             const msgDiv = document.getElementById('newsletter-msg');
             const submitBtn = newsletterForm.querySelector('button');
-            
+
             // Loading state
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'JOINING...';
-            
+
             try {
                 const response = await fetch('api/subscribe.php', {
                     method: 'POST',
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: `email=${encodeURIComponent(email)}`
                 });
                 const result = await response.json();
-                
+
                 if (result.success) {
                     msgDiv.innerHTML = '<span class="text-white">✓ Welcome to the list! Check your inbox soon.</span>';
                     newsletterForm.reset();
@@ -84,26 +84,58 @@ document.addEventListener('DOMContentLoaded', () => {
 // 5. Toast Notification System
 function showToast(message, type = 'success') {
     const toast = document.createElement('div');
-    toast.className = `fixed bottom-6 right-6 px-6 py-4 rounded-xl shadow-2xl z-[100] transform transition-all translate-y-20 flex items-center gap-3 font-bold text-sm ${
-        type === 'success' ? 'bg-primary text-white' : 'bg-red-600 text-white'
-    }`;
-    
+    toast.className = `fixed bottom-6 right-6 px-6 py-4 rounded-xl shadow-2xl z-[100] transform transition-all translate-y-20 flex items-center gap-3 font-bold text-sm ${type === 'success' ? 'bg-primary text-white' : 'bg-red-600 text-white'
+        }`;
+
     const icon = type === 'success' ? 'check_circle' : 'error';
     toast.innerHTML = `
         <span class="material-symbols-outlined">${icon}</span>
         <span>${message}</span>
     `;
-    
+
     document.body.appendChild(toast);
-    
+
     // Trigger animation
     setTimeout(() => {
         toast.classList.remove('translate-y-20');
     }, 100);
-    
+
     // Auto-remove
     setTimeout(() => {
         toast.classList.add('translate-y-20');
         setTimeout(() => toast.remove(), 500);
     }, 4000);
+}
+
+// 6. Bookmark System
+async function toggleBookmark(slug) {
+    const btn = document.getElementById('bookmark-btn');
+    if (!btn) return;
+
+    try {
+        const formData = new FormData();
+        formData.append('tool_slug', slug);
+
+        const response = await fetch('/makeaibucks/api/bookmark.php', {
+            method: 'POST',
+            body: formData
+        });
+        const result = await response.json();
+
+        if (result.success) {
+            const icon = btn.querySelector('.material-symbols-outlined');
+            if (result.data.bookmarked) {
+                btn.classList.add('text-primary', 'border-primary');
+                icon.style.fontVariationSettings = "'FILL' 1";
+            } else {
+                btn.classList.remove('text-primary', 'border-primary');
+                icon.style.fontVariationSettings = "'FILL' 0";
+            }
+            showToast(result.message);
+        } else {
+            showToast(result.message, 'error');
+        }
+    } catch (e) {
+        showToast('Error managing bookmark.', 'error');
+    }
 }
